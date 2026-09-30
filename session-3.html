@@ -1563,7 +1563,7 @@ body[data-mode="doc"] .lead { max-width: 100%; }
       <aside class="handout">
         <h3>하네스<button type="button" class="modal-trigger" data-modal="m-harness" aria-label="하네스 설명">i</button>란</h3>
         <p>
-          하네스(harness)는 원래 <strong>AI 자동화를 안정적으로 돌아가게 하는 골격 전체</strong>(도구 연결·맥락 관리·실행·검증)를 뜻합니다. 2주차의 울트라코드도 이런 하네스였습니다.
+          하네스(harness)는 원래 <strong>AI 자동화를 안정적으로 돌아가게 하는 골격 전체</strong>(도구 연결·맥락 관리·실행·검증)를 뜻합니다. 2주차의 자율 실행도 이런 하네스였습니다.
           그중 <strong>결과가 합격 기준을 통과하는지 자동으로 확인·채점하는 부분이 검증 하네스</strong>이고, 오늘 만드는 것이 이것입니다. 테스트 입력과 합격 기준, 통과·재시도를 결정하는 게이트를 묶어 사람 없이 채점합니다.
         </p>
 
@@ -1607,14 +1607,8 @@ body[data-mode="doc"] .lead { max-width: 100%; }
         </div>
 
         <h4>이미 제품이 된 하네스: <code>/code-review</code></h4>
-        <p>
-          하네스가 멀리 있는 개념이 아니라는 증거가 Claude Code 안에 이미 있습니다. <code>/code-review</code>는 바뀐 결과물을 정해진 기준으로 <strong>자동 채점하는 하네스</strong>입니다.
-          특히 <code>ultra</code> 모드는 여러 검토 에이전트를 <em>동시에</em> 띄워 클라우드에서 교차 검증하고 사람이 다 보지 못하는 부분을 대신 걸러 줍니다.
-          오늘 우리가 손으로 묶는 것(테스트 세트·채점표·게이트)을 도구 제작자가 미리 하나로 묶어 둔 셈입니다. <em>검증이 정교해지면 그 자체가 하나의 도구가 된다</em>는 것을 보여 줍니다.
-        </p>
-        <p>
-          2026년 들어 이런 검증 도구가 더 늘었습니다. <code>/ultrareview</code><a href="#fn19" class="footnote-ref">[19]<span class="fn-tooltip">What's new · Claude Code (2026)</span></a>는 클라우드에서 여러 버그 헌팅 에이전트를 동시에 돌려 찾은 문제를 CLI로 돌려줍니다. <strong>security-guidance 플러그인</strong>은 Claude가 작업하는 동안 파일 수정·턴·커밋 세 시점에서 변경을 자동 검토해 취약점을 걸러냅니다. 모두 검증을 하나의 도구로 만든 예이고 오늘 만드는 하네스의 완성형입니다. Anthropic도 길게 도는 자율 작업에서 AI의 "완료" 보고를 그대로 믿지 않고 끝나기 전에 스스로 검증하게 만드는 것을 하네스의 핵심으로 정리합니다<a href="#fn24" class="footnote-ref">[24]<span class="fn-tooltip">Effective harnesses for long-running agents · Anthropic</span></a>.
-        </p>
+        <p>검토 작업을 여러 에이전트에 나눠 맡길 수도 있습니다. 다만 여러 에이전트가 같은 오류를 놓칠 수 있으므로, 검토 결과를 테스트와 사람의 확인으로 보완해야 합니다.</p>
+        <p>검증을 자동화할 때는 테스트 실행, 변경 내용 검토, 보안 점검을 작업 절차에 포함할 수 있습니다. 도구의 완료 보고만으로 성공을 판단하지 않고, 실행 기록과 테스트 결과를 확인합니다. 사용할 기능과 검사 범위는 해당 도구의 공식 문서에서 확인합니다.</p>
       </aside>
     </section>
 
@@ -1638,10 +1632,7 @@ body[data-mode="doc"] .lead { max-width: 100%; }
 
       <aside class="handout">
         <h3>왜 하필 "지금" 하네스인가</h3>
-        <p>
-          2주차 마지막에 <strong>울트라코드<button type="button" class="modal-trigger" data-modal="m-ultracode" aria-label="울트라코드 설명">i</button></strong>를 다뤘습니다. 한 번 요청에 보조 일꾼을 동시에 최대 16개, 누적 최대 1,000개까지 투입해
-          스스로 이해·수정·검증 단계를 진행하는 모드였습니다. 이렇게 자율성이 올라가면 사람이 모든 중간 산출물을 한 줄씩 따라가며 확인하는 일은 <em>사실상 불가능</em>해집니다.
-        </p>
+        <p>2주차 마지막에는 작업 분해와 도구 실행을 AI에 맡기는 방식을 다뤘습니다. 중간 작업이 늘어나면 모든 과정을 사람이 직접 확인하기 어렵습니다. 따라서 실행 권한과 중단 조건, 결과 검증을 함께 설계해야 합니다.</p>
         <p>
           그래서 통제의 초점이 바뀝니다. 예전에는 <strong>입력단</strong>에서 즉 "더 정확히 지시해서" 품질을 높였습니다.
           지금은 <strong>출력단</strong>에서 즉 "더 정확히 검증해서" 품질을 보장합니다. 자율적인 일꾼을 믿고 맡기려면 그 결과를 걸러내는 게이트가 필요합니다.
@@ -1661,7 +1652,7 @@ body[data-mode="doc"] .lead { max-width: 100%; }
           자율성이 높은 작업일수록 이 원칙이 더 중요해집니다. 일꾼이 많아질수록 사람이 직접 정해야 할 단 하나는 <em>합격 기준과 채점표</em>입니다.
         </div>
         <p>
-          이것이 2주차 마지막의 "<em>그럼 울트라코드가 내가 원하는 결과를 정확히 내게 하려면 어떻게 통제할까</em>"라는 질문의 답입니다.
+          이것이 2주차 마지막의 "<em>그럼 자율 실행가 내가 원하는 결과를 정확히 내게 하려면 어떻게 통제할까</em>"라는 질문의 답입니다.
           답은 더 강력한 모델도, 더 긴 프롬프트도 아니라 <strong>하네스</strong>입니다.
         </p>
 
@@ -1676,12 +1667,8 @@ body[data-mode="doc"] .lead { max-width: 100%; }
           오늘 만든 이 방식을 업계는 <strong>eval-driven development</strong>(평가 중심 개발)<a href="#fn23" class="footnote-ref">[23]<span class="fn-tooltip">Demystifying evals for AI agents · Anthropic</span></a>라 부르고, 도구가 아니라 잘 만든 평가 자체가 진짜 경쟁력이라고 말합니다. Anthropic도 좋은 평가가 자동화를 더 자신 있게 내보내게 한다고 정리합니다.
         </p>
 
-        <h4>가장 강한 모델일수록 검증을 더 안에 둡니다</h4>
-        <p>
-          2026년 6월 9일 공개된 <strong>Fable 5</strong><a href="#fn21" class="footnote-ref">[21]<span class="fn-tooltip">Claude Fable 5 · Anthropic 발표(2026-06-09)</span></a>가 이 원칙을 모델 자체로 보여줍니다.
-          가장 높은 강도에서 스스로 자기 작업을 점검하고 검증합니다. 사이버·생물·화학 같은 고위험 요청은 분류기가 걸러 Opus 4.8로 우회시키는 게이트를 안에 두고 있습니다.
-          더 강한 모델이 나온다고 검증이 사라지지 않습니다. 오히려 더 깊이 들어갑니다. 사람이 두는 하네스는 그 위에서 "내 업무 기준"을 지키는 바깥쪽 게이트입니다.
-        </p>
+        <h4>모델의 자체 점검과 업무 검증을 구분합니다</h4>
+        <p>모델이 자체적으로 결과를 점검하더라도 업무에서 필요한 검증을 대신하지는 못합니다. 허용할 입력과 행동, 결과의 합격 기준을 별도로 정하고 테스트와 사람의 검토를 연결합니다. 특정 모델의 내부 보안 구조를 전제로 설계하지 않습니다.</p>
       </aside>
     </section>
 
@@ -2369,7 +2356,7 @@ print("PASS" if not fails else "FAIL · " + ", ".join(fails))</pre>
           <tbody>
             <tr><td>반복·자동 실행되는 일</td><td>한 번 쓰고 마는 일</td></tr>
             <tr><td>결과가 외부로 나가는 일</td><td>사람이 매번 보는 소량</td></tr>
-            <tr><td>자율성이 높은 일(울트라코드)</td><td>틀려도 손쉽게 되돌릴 수 있는 일</td></tr>
+            <tr><td>자율성이 높은 일(자율 실행)</td><td>틀려도 손쉽게 되돌릴 수 있는 일</td></tr>
             <tr><td>틀리면 비용이 큰 일</td><td>정답이 흐릿하고 위험도 낮은 일</td></tr>
           </tbody>
         </table>
@@ -2386,7 +2373,7 @@ print("PASS" if not fails else "FAIL · " + ", ".join(fails))</pre>
         <ul class="bullets">
           <li><strong>반복·자동 실행</strong>: 매일·매주 사람 없이 실행되는 일일수록 사람이 확인하지 못하는 만큼 자동 채점이 그 역할을 대신해야 합니다.</li>
           <li><strong>결과가 외부로 나감</strong>: 고객·경영진에게 바로 가는 산출물은 한 번 나가면 되돌리기 어려워 게이트가 꼭 필요합니다.</li>
-          <li><strong>자율성이 높음</strong>: 울트라코드처럼 여러 일꾼이 동시에 도는 일은 사람이 한 줄씩 못 보므로 검증이 유일한 통제점입니다.</li>
+          <li><strong>자율성이 높음</strong>: 자율 실행처럼 여러 일꾼이 동시에 도는 일은 사람이 한 줄씩 못 보므로 검증이 중요한 확인 단계입니다.</li>
           <li><strong>틀리면 비용이 큼</strong>: 숫자 하나 틀리면 의사결정이 어긋나는 보고서처럼 실패 비용이 큰 일일수록 하네스 가치가 큽니다.</li>
         </ul>
 
@@ -2511,7 +2498,7 @@ print("PASS" if not fails else "FAIL · " + ", ".join(fails))</pre>
           </li>
           <li class="pipeline-step">
             <div class="step-label">자율</div>
-            <div class="step-title">울트라코드에</div>
+            <div class="step-title">자율 실행에</div>
             <div class="step-sub">게이트가 수백 개 결과를 걸러냄</div>
           </li>
           <li class="pipeline-step is-current">
@@ -2523,28 +2510,26 @@ print("PASS" if not fails else "FAIL · " + ", ".join(fails))</pre>
       </div>
 
       <aside class="handout">
-        <h3>① 울트라코드 + 하네스 = 믿고 맡기는 자율 실행</h3>
+        <h3>① 자율 실행 + 하네스 = 믿고 맡기는 자율 실행</h3>
         <p>
-          2주차 마지막 질문 "울트라코드가 내가 원하는 결과를 정확히 내게 하려면 어떻게 통제하나"의 답이 오늘 완성됩니다.
-          울트라코드는 한 요청을 수백 개로 나눠 동시에 처리합니다. 사람이 그 모두를 확인할 수는 없지만 <strong>마지막에 하네스를 두면</strong> 합격선을 넘은 결과만 통과합니다.
+          2주차 마지막 질문 "자율 실행가 내가 원하는 결과를 정확히 내게 하려면 어떻게 통제하나"의 답이 오늘 완성됩니다.
+          자율 실행은 하나의 요청을 여러 작업으로 나누도록 구성할 수 있습니다. 사람이 그 모두를 확인할 수는 없지만 <strong>마지막에 하네스를 두면</strong> 합격선을 넘은 결과만 통과합니다.
           그래서 "잘 맞는 일"의 조건이 바로 <em>검증 기준이 명확한 일</em>이었습니다. 하네스가 명확할수록 자율적인 도구에 더 크고 어려운 일을 맡길 수 있습니다.
         </p>
         <p>
-          여기서 검증도 한 명에게만 맡기지 않습니다. 결과를 채점할 때 <strong>여러 채점관을 동시에 띄워 다수결</strong>로 게이트를 통과시키면 일꾼이 수백이어도 검증은 흔들리지 않습니다.
-          자율 실행은 <em>많이·빠르게</em> 하고 다수결 검증은 <em>엄격하게</em> 합니다. 이렇게 같은 구조로 묶으면 울트라코드를 믿고 맡길 수 있습니다. 앞 <em>채점관</em> 꼭지에서 본 "여러 채점관 다수결"이 여기서 통제 장치가 됩니다.
+          여기서 검증도 한 명에게만 맡기지 않습니다. 결과를 채점할 때 <strong>여러 채점관을 동시에 띄워 다수결</strong>로 게이트를 통과시키면 다수결만으로 정확성을 보장할 수는 없으므로 테스트와 사람의 확인을 함께 둡니다.
+          자율 실행은 <em>많이·빠르게</em> 하고 다수결 검증은 <em>엄격하게</em> 합니다. 이렇게 같은 구조로 묶으면 자율 실행를 믿고 맡길 수 있습니다. 앞 <em>채점관</em> 꼭지에서 본 "여러 채점관 다수결"이 여기서 통제 장치가 됩니다.
         </p>
 
-        <h4>울트라코드는 2026년 Dynamic workflows로 자리잡았습니다</h4>
-        <p>
-          2주차에 짧게 다룬 울트라코드의 자율 실행은 2026년 5월 <strong>Dynamic workflows</strong><a href="#fn20" class="footnote-ref">[20]<span class="fn-tooltip">Claude Opus 4.8 · Anthropic 발표(2026-05-28)</span></a>로 공개됐습니다(연구 프리뷰). Claude가 직접 스크립트를 짜서 <strong>수십에서 수백 개의 서브에이전트</strong>를 한 세션에서 돌리고 <em>결과를 보고하기 전에 스스로 검증</em>합니다. 공식 예시로는 코드베이스 대규모 수정을 <strong>기존 테스트 세트를 합격 기준으로</strong> 삼아 처음부터 병합까지 해냅니다. 자율성이 더 커질수록 테스트 세트와 합격 기준이 유일한 통제점이라는 오늘의 결론이 실제 기능으로 확인됩니다.
-        </p>
+        <h4>자율 실행에서도 검증 기준이 필요합니다</h4>
+        <p>자율 실행에서는 작업을 나누는 방법뿐 아니라 결과를 합치는 기준도 필요합니다. 작업별 테스트와 전체 결과 검증을 함께 구성하고, 실패 시 재시도하거나 사람에게 확인할 조건을 정합니다. 병렬 처리 규모는 실제 도구의 한도와 비용, 작업 간 의존성을 확인한 뒤 결정합니다.</p>
 
         <h4>그래서 자율 실행에 하네스를 다는 법</h4>
-        <p>울트라코드든 Dynamic workflows든 하네스를 다는 방식은 같습니다. 오늘 만든 네 조각을 자율 실행의 입구와 출구에 둡니다.</p>
+        <p>어떤 도구를 사용하든 하네스를 다는 방식은 같습니다. 오늘 만든 네 조각을 자율 실행의 입구와 출구에 둡니다.</p>
         <ol class="steps">
           <li><strong>합격 기준을 파일로 둔다</strong>: 테스트 세트와 루브릭을 <code>.claude/</code>에 둡니다. 대화 속 약속이 아니라 파일이어야 수백 개 일꾼이 같은 기준을 봅니다.</li>
           <li><strong>끝 조건을 검증으로 지정한다</strong>: "테스트 세트를 다 통과할 때까지" 또는 "하네스를 통과한 결과만 보고"를 멈춤 조건으로 줍니다(<code>/loop</code>·<code>/goal</code>). 통과 신호가 곧 완료 신호입니다.</li>
-          <li><strong>출구에 다수결 채점관을 둔다</strong>: 자율로 많이 빠르게 만들되 결과는 여러 채점관에게 따로 채점받아 과반이 통과한 것만 내보냅니다. 일꾼이 수백이어도 검증은 흔들리지 않습니다.</li>
+          <li><strong>출구에 다수결 채점관을 둔다</strong>: 자율로 많이 빠르게 만들되 결과는 여러 채점관에게 따로 채점받아 과반이 통과한 것만 내보냅니다. 다수결만으로 정확성을 보장할 수는 없으므로 테스트와 사람의 확인을 함께 둡니다.</li>
           <li><strong>미달이면 사람에게 넘긴다</strong>: 재시도 상한을 두고 그 안에 통과 못 하거나 채점관 확신이 낮으면 자동으로 내보내지 말고 사람에게 넘깁니다.</li>
         </ol>
         <div class="prompt">
@@ -2659,12 +2644,12 @@ description: 주간보고 초안을 rubric-주간보고.md 기준으로 채점�
 
         <h3>오늘 다룬 것</h3>
         <ul class="bullets">
-          <li><strong>왜 하네스인가</strong>: AI의 "완료"는 주장일 뿐 증명이 아니므로 통과/불통과로 증명한다. 자율성이 오를수록 검증이 유일한 통제점.</li>
+          <li><strong>왜 하네스인가</strong>: AI의 "완료"는 주장일 뿐 증명이 아니므로 통과/불통과로 증명한다. 자율성이 오를수록 검증이 중요한 확인 단계.</li>
           <li><strong>하네스의 구성</strong>: 테스트 세트(정상·경계·불량), 채점표(정량+정성), 두 채점관(기계·AI), 게이트와 리포트.</li>
           <li><strong>직접 만들기</strong>: 주간보고에 검증 하네스를 처음부터 끝까지 다는 전체 예시 + 내 업무 적용(트랙 A 정형 / 트랙 B 정성).</li>
           <li><strong>실무·안전</strong>: 막혔을 때의 대처, 사내 정보를 AI에 줄 때의 기준, 파일·git 보존.</li>
           <li><strong>산출물 품질</strong>: 글·디자인의 AI 슬롭을 피하는 법과 DESIGN.md, 그리고 검증 항목으로 잇기.</li>
-          <li><strong>확장</strong>: 흔한 실수·과설계 경계, 울트라코드·팀으로의 확장.</li>
+          <li><strong>확장</strong>: 흔한 실수·과설계 경계, 자율 실행·팀으로의 확장.</li>
           <li><strong>팀 자산화</strong>: 하네스를 스킬·플러그인으로 묶어 팀이 한 번에 설치해 같은 기준을 공유한다.</li>
         </ul>
       </aside>
@@ -2697,9 +2682,9 @@ description: 주간보고 초안을 rubric-주간보고.md 기준으로 채점�
             <li id="fn16"><a href="https://github.com/anthropics/skills" target="_blank" rel="noopener">anthropics/skills · 공식 Agent Skills 저장소</a></li>
             <li id="fn17"><a href="https://github.com/anthropics/claude-plugins-community" target="_blank" rel="noopener">claude-plugins-community · 커뮤니티 플러그인 마켓플레이스</a></li>
             <li id="fn18"><a href="https://github.com/hesreallyhim/awesome-claude-code" target="_blank" rel="noopener">awesome-claude-code · 스킬·플러그인 정리 목록</a></li>
-            <li id="fn19"><a href="https://code.claude.com/docs/en/whats-new" target="_blank" rel="noopener">What's new · Claude Code (2026 · /ultrareview·security-guidance·dynamic workflows)</a></li>
-            <li id="fn20"><a href="https://www.anthropic.com/news/claude-opus-4-8" target="_blank" rel="noopener">Claude Opus 4.8 · Anthropic (Dynamic workflows, 2026-05-28)</a></li>
-            <li id="fn21"><a href="https://www.anthropic.com/news/claude-fable-5-mythos-5" target="_blank" rel="noopener">Claude Fable 5 · Anthropic (2026-06-09, 자기 검증·Opus 4.8 폴백 게이트)</a></li>
+            <li id="fn19"><a href="https://code.claude.com/docs/en/whats-new" target="_blank" rel="noopener">Claude Code 변경 안내</a></li>
+            
+            
             <li id="fn22"><a href="https://www.jasonwei.net/blog/asymmetry-of-verification-and-verifiers-law" target="_blank" rel="noopener">Asymmetry of verification and verifier's law · Jason Wei (검증이 쉬운 일일수록 AI가 풀어낸다)</a></li>
             <li id="fn23"><a href="https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents" target="_blank" rel="noopener">Demystifying evals for AI agents · Anthropic (실패 사례로 만든 테스트·채점관 보정·게이트)</a></li>
             <li id="fn24"><a href="https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents" target="_blank" rel="noopener">Effective harnesses for long-running agents · Anthropic (완료 선언 방지·자가 검증)</a></li>
@@ -2768,12 +2753,12 @@ description: 주간보고 초안을 rubric-주간보고.md 기준으로 채점�
   <div class="modal-overlay" id="m-ultracode">
     <div class="modal-box">
       <button type="button" class="modal-close" aria-label="닫기">✕</button>
-      <div class="modal-header"><h3 class="modal-title">울트라코드 (복습)</h3></div>
+      <div class="modal-header"><h3 class="modal-title">자율 실행 (복습)</h3></div>
       <div class="modal-body">
-        <p>2주차에서 다룬, Claude Code를 <strong>가장 깊게 생각하면서 필요하면 스스로 작업팀을 꾸리는</strong> 상태로 켜는 설정입니다. 한 요청을 여러 단계로 펼치고, 보조 일꾼을 동시에 최대 16개(누적 최대 1,000개)까지 투입합니다.</p>
+        <p>AI가 목표를 바탕으로 작업을 나누고 도구를 실행하도록 구성하는 방식입니다. 지원 기능과 동시 실행 한도는 사용하는 제품에서 확인합니다.</p>
         <div class="modal-section">
           <div class="modal-section-title">왜 하네스와 묶이나</div>
-          <p>일꾼이 많아 사람이 한 줄씩 확인하지 못하므로 <strong>마지막 단계의 검증 하네스</strong>가 유일한 통제점이 됩니다. 검증 기준이 명확한 일일수록 울트라코드가 효과적입니다.</p>
+          <p>일꾼이 많아 사람이 한 줄씩 확인하지 못하므로 <strong>마지막 단계의 검증 하네스</strong>가 중요한 확인 단계이 됩니다. 검증 기준이 명확한 일일수록 자율 실행가 효과적입니다.</p>
         </div>
         <p class="modal-src">출처:
           <a href="https://www.anthropic.com/research/building-effective-agents" target="_blank" rel="noopener">[1] Building Effective Agents</a>

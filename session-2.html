@@ -1341,7 +1341,7 @@ body[data-mode="doc"] .lead { max-width: 100%; }
       <li><a href="#slide-14">Claude의 진화</a></li>
       <li><a href="#slide-15">왜 터미널인가</a></li>
       <li><a href="#slide-16">실무 적용</a></li>
-      <li><a href="#slide-ultracode">울트라코드</a></li>
+      <li><a href="#slide-ultracode">자율 실행</a></li>
       <li class="toc-group">마무리</li>
       <li><a href="#slide-17">정리</a></li>
       <li class="toc-group">부록</li>
@@ -2241,14 +2241,14 @@ description: 회의 녹취/메모를 표준 회의록으로 정리한다.
           <li><strong>⑤ 검증 조건</strong>: 유효성 판단 기준을 <em>셀 수 있게</em> 적습니다. 좋은가가 아니라 핵심 수치가 3개 이상 있는가처럼 숫자나 조건으로 판정할 수 있어야, 통과와 재시도가 사람 없이 자동으로 결정됩니다.</li>
         </ul>
 
-        <h4>② 모델 배분: 난이도에 맞게 (2026년 기준)</h4>
+        <h4>② 모델 배분: 난이도에 맞게 </h4>
         <p>비싼 모델이 항상 좋은 결과를 보장하지는 않습니다. <em>역할의 난이도</em>에 맞춰 고르는 것이 핵심입니다.</p>
         <table class="example-table">
-          <tbody><tr><th>Opus 4.8<button type="button" class="modal-trigger" data-modal="m-models" aria-label="Opus·Sonnet·Haiku 모델 설명">i</button></th><td>설계, 판단: 전체 구조와 기준을 만드는, 가장 까다로운 역할</td></tr>
-          <tr><th>Sonnet 4.6</th><td>구현, 반복: 정해진 패턴을 따라 작업하는, 대부분의 일상 역할</td></tr>
-          <tr><th>Haiku 4.5</th><td>변환, 분류: 빠른 판단만 필요한 단순 역할 (예: 라우터, 포맷 변환)</td></tr>
+          <tbody><tr><th>복잡한 판단용 모델<button type="button" class="modal-trigger" data-modal="m-models" aria-label="Opus·Sonnet·Haiku 모델 설명">i</button></th><td>설계, 판단: 전체 구조와 기준을 만드는, 가장 까다로운 역할</td></tr>
+          <tr><th>일반 작업용 모델</th><td>구현, 반복: 정해진 패턴을 따라 작업하는, 대부분의 일상 역할</td></tr>
+          <tr><th>단순 처리용 모델</th><td>변환, 분류: 빠른 판단만 필요한 단순 역할 (예: 라우터, 포맷 변환)</td></tr>
         </tbody></table>
-        <p>요즘은 모델이 전반적으로 강력해져, 대부분의 일은 Sonnet으로 충분합니다. 정말 까다로운 판단에만 Opus를, 단순 분류에는 Haiku를 쓰면 속도와 비용을 함께 아낄 수 있습니다.</p>
+        <p>단순 분류와 복잡한 설계를 같은 모델에 맡길 필요는 없습니다. 실제 업무 예제로 품질과 비용을 비교하고, 결과가 기준을 충족하는지 확인합니다.</p>
 
         <h4>③ 시스템 프롬프트: 명시해야 할 세 가지</h4>
         <p>AI는 모호한 지시를 임의로 채웁니다. 그래서 세 축을 구체적으로 적어야 합니다.</p>
@@ -2728,7 +2728,7 @@ model: sonnet
           <article>
             <span>모델</span>
             <h3>더 똑똑하고 빠르게</h3>
-            <p>Opus 4.8 · Sonnet 4.6 · Haiku 4.5</p>
+            <p>복잡한 판단용 모델 · 일반 작업용 모델 · 단순 처리용 모델</p>
           </article>
           <article>
             <span>어디서나</span>
@@ -2760,11 +2760,7 @@ model: sonnet
 
       <aside class="handout">
         <h3>① 모델: 더 똑똑해지고, 더 빨라지고, 더 싸졌습니다</h3>
-        <p>
-          현재 Claude의 세 모델은 <strong>Opus 4.8</strong>(가장 똑똑한 추론), <strong>Sonnet 4.6</strong>(균형), <strong>Haiku 4.5</strong>(가장 빠름)입니다.
-          중요한 변화는, 예전에 가장 비싼 모델이 필요했던 일을 이제는 중간, 하위 모델도 <em>거뜬히 해낸다</em>는 점입니다.
-          그래서 무조건 제일 좋은 모델이 아니라 일의 난이도에 맞는 모델을 고르는 감각이 더 중요해졌습니다.
-        </p>
+        <p>모델은 작업 난이도, 결과 품질, 응답 시간과 비용을 함께 비교해 선택합니다. 같은 예제와 합격 기준으로 시험하고, 필요한 품질을 충족하는 구성을 고릅니다.</p>
 
         <h3>② 어디서나 쓸 수 있게: 터미널을 넘어</h3>
         <p>
@@ -2963,84 +2959,30 @@ model: sonnet
     <section class="unit" id="slide-ultracode" data-step="ultra">
       <div class="slide-copy">
         <div class="chapter">PART 3 · 심화 학습 ④</div>
-        <h2>울트라코드<br><em>알아서 짜고 검사까지</em></h2>
+        <h2>자율 실행<br><em>알아서 짜고 검사까지</em></h2>
         <p class="lead">단계를 손으로 짜던 일을, 도구가 스스로 판단해 펼치고 합치는 모드</p>
 
         <table class="slide-table compare">
           <thead>
-            <tr><th>지금까지: 사람이 단계를 짬</th><th>울트라코드: 도구가 알아서</th></tr>
+            <tr><th>지금까지: 사람이 단계를 짬</th><th>자율 실행: 도구가 알아서</th></tr>
           </thead>
           <tbody>
             <tr><td>이해 → 수정 → 검증을 사람이 지시</td><td>한 요청을 스스로 여러 단계로 펼침</td></tr>
-            <tr><td>한 명이 순차로 처리</td><td>일을 나눠 동시에(최대 16개) 처리</td></tr>
+            <tr><td>한 명이 순차로 처리</td><td>일을 나눠 동시에 처리</td></tr>
           </tbody>
         </table>
       </div>
 
-      <aside class="handout">
-        <h3>울트라코드란 무엇인가요</h3>
-        <p>
-          울트라코드는 Claude Code를 "가장 깊게 생각하면서, 필요하면 스스로 작업팀을 꾸려 일하는" 상태로 켜 두는 설정입니다.
-          평소에는 사람이 "이건 이해부터, 그다음 고치고, 마지막에 검증해"라고 단계를 손으로 짜서 지시했다면, 울트라코드는 그 판단과 진행을 도구가 알아서 합니다.
-          한 번의 요청이 이해에서 수정, 검증까지 여러 단계로 자연스럽게 이어집니다.
-        </p>
-        <p>
-          핵심은 <em>최고 수준의 꼼꼼함</em>과 <em>스스로 일감을 나눠 동시에 처리하는 능력</em>을 한데 묶었다는 점입니다.
-          추론의 깊이 자체는 가장 높은 단계와 같고, 그 위에 "필요하면 스스로 작업을 벌이는 층"이 한 겹 더 얹혀 있다고 보면 됩니다.
-          그래서 간단한 일은 그냥 처리하고, 무거운 일은 알아서 여러 갈래로 펼쳐 일합니다.
-        </p>
-        <ul class="bullets">
-          <li><strong>자동 오케스트레이션</strong>: "이 작업이 팀을 꾸릴 만한가"를 Claude가 스스로 판단해 진행합니다.</li>
-          <li><strong>대규모 분업</strong>: 한 번 실행에 보조 일꾼을 최대 1,000개까지, 동시에는 최대 16개까지 투입합니다.</li>
-          <li><strong>스스로 발동</strong>: 한 요청이 이해에서 수정, 검증까지 여러 단계로 이어집니다.</li>
-          <li><strong>철저함 우선</strong>: 가장 높은 추론 강도로 깊게 생각한 뒤 결과를 내놓습니다.</li>
-        </ul>
-        <p>비유하자면, 한 전문가에게 일을 맡겼더니 사안의 규모를 보고 "혼자 해도 되겠다" 또는 "팀을 꾸려야겠다"를 스스로 판단해, 필요할 때 보조 인력을 대거 투입하고 결과를 다시 점검까지 해서 가져오는 방식입니다.</p>
-
-        <h3>그럼에도 이 과정이 중요한 이유</h3>
-        <ul class="bullets">
-          <li><strong>명세는 여전히 사람 몫입니다.</strong> 명세가 나쁘면 똑똑해진 도구는 그 잘못된 지시를 더 빠르고 충실하게 실행할 뿐입니다. 엉뚱한 목적지에 더 빨리 도착하는 셈이라, 좋은 명세를 쓰는 법은 오히려 더 중요해집니다.</li>
-          <li><strong>자율성이 올라갈수록 검증이 더 필요합니다.</strong> 수백 개의 보조 일꾼이 동시에 움직이면 사람이 한 줄씩 따라가며 확인하기는 사실상 불가능합니다. 그래서 "맞게 됐다고 주장만 하지 말고, 통과·불통과 신호로 증명하라"는 원칙이 더 절실해집니다.</li>
-          <li><strong>일을 쪼개고 판단하는 건 사람의 영역입니다.</strong> 큰 일을 어디서 나눌지, 어느 결과를 받아들이고 어느 것을 되돌릴지는 도구가 대신 정해 주지 않습니다.</li>
-          <li><strong>도구는 바뀌지만 개념은 남습니다.</strong> 도구의 이름과 버튼은 계속 바뀌어도 "명확히 지시하고, 일을 나누고, 결과를 검증한다"는 개념은 그대로 남습니다.</li>
-        </ul>
-        <div class="callout">
-          <strong>핵심</strong> 울트라코드는 명세·분해·검증을 없앤 게 아니라 자동화했을 뿐입니다. 직접 단계를 잇고 엮던 수고는 줄지만, 무엇을 만들지 적고 큰일을 쪼개고 결과를 합격선으로 거르는 안목은 더 중요해집니다. 유능한 팀을 새로 들였다고 관리자가 필요 없어지지 않듯, <em>무엇을 맡기고 결과를 어떻게 검수할지</em> 아는 사람이 있어야 그 팀이 제대로 굴러갑니다.
-        </div>
-
-        <h4>켜는 법과 사용 조건</h4>
-        <p>세션에서 효율(effort) 설정을 울트라코드로 바꾸면 됩니다. 그 세션에만 적용되고, 새 세션을 시작하면 자동으로 풀립니다.</p>
-        <div class="prompt">
-          <div class="prompt-label">Claude Code 세션에서</div>
-          <pre class="prompt-body">/effort ultracode   →  켜기
-/effort high        →  평소 작업으로 되돌리기</pre>
-        </div>
-        <ul class="bullets">
-          <li><strong>버전</strong>: Claude Code <code>v2.1.154</code> 이상 (동적 워크플로우 포함)</li>
-          <li><strong>모델</strong>: 가장 높은 추론 강도(xhigh)를 지원하는 모델에서만 <code>/effort</code> 메뉴에 나타납니다.</li>
-          <li><strong>공개</strong>: 2026년 5월 28일, 리서치 프리뷰로 공개 (유료 플랜 대상)</li>
-        </ul>
-
-        <h3>울트라코드, 맞는 일과 아닌 일</h3>
-        <p>고민될 때 두 가지만 물으면 됩니다. 이 작업, <strong>검증 기준이 또렷한가.</strong> 그리고 <strong>병렬로 쪼갤 수 있는가.</strong> 둘 다 예에 가까우면 울트라코드가 빛나고, 하나라도 아니라면 보통 과합니다.</p>
-        <table class="slide-table compare">
-          <thead>
-            <tr><th>잘 맞는 일</th><th>맞지 않는 일</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>크고 여러 갈래로 쪼갤 수 있는 일</td><td>한 줄짜리 사소한 수정</td></tr>
-            <tr><td>검증 기준이 또렷한 일</td><td>빠른 단답 질문</td></tr>
-            <tr><td>한 번에 담기 힘든 규모의 정리·조사</td><td>비용·시간이 빡빡한 일</td></tr>
-            <tr><td>시간이 걸려도 철저함이 중요한 일</td><td>무엇이 맞는지 흐릿한 일</td></tr>
-          </tbody>
-        </table>
-        <p><strong>잘 맞는 일:</strong> 공유 폴더의 문서 수백 건을 같은 양식으로 점검하기, 계약서 묶음 전체에서 빠진 조항을 전수 확인하기, 한 주제를 여러 자료로 폭넓게 조사해 한 보고서로 모으기.</p>
-        <p><strong>맞지 않는 일:</strong> 제목 한 줄 바꾸기, "이 단어 뜻이 뭐야" 같은 단답 질문, 외부로 바로 나가는 안내문을 사람 검토 없이 일괄 발송하기.</p>
-
-        <div class="callout">
-          <strong>다음 질문</strong> 그럼 울트라코드가 내가 원하는 결과를 정확히 내게 하려면 어떻게 통제할까요. 그 답이 <em>검증 장치(하네스)</em>입니다. 자율적인 도구일수록, 합격 기준과 채점표를 미리 정해 두는 것이 결과를 내가 원하는 대로 맞추는 핵심입니다.
-        </div>
-      </aside>
+      <aside class="handout"><h3>자율 실행이란 무엇인가요</h3>
+ <p>AI가 목표를 받은 뒤 필요한 작업을 나누고, 도구를 실행하고, 중간 결과에 따라 다음 단계를 정하도록 구성하는 방식입니다. 여기서는 특정 제품의 설정이 아니라 작업 구성 방법으로 설명합니다.</p>
+ <h3>사람이 먼저 정할 것</h3><ul class="bullets">
+ <li><strong>목표와 범위:</strong> 만들 결과와 변경해도 되는 파일, 접근 가능한 자료를 정합니다.</li>
+ <li><strong>작업 분담:</strong> 독립적으로 처리할 수 있는 작업만 나누고, 서로의 변경이 겹치지 않게 합니다.</li>
+ <li><strong>검증 기준:</strong> 테스트와 검토 기준을 작업 전에 정합니다.</li>
+ <li><strong>중단 조건:</strong> 비용과 실행 시간의 한도, 실패 시 중단하거나 사람에게 확인할 조건을 정합니다.</li></ul>
+ <h3>사용 전에 확인할 조건</h3><p>자율 실행과 병렬 작업의 지원 여부, 설정 명령, 실행 한도는 제품과 계정에 따라 다릅니다. 사용하는 도구의 공식 문서와 실제 실행 환경에서 확인합니다. 작은 작업에서 검증한 뒤 범위를 넓힙니다.</p>
+ <h3>맞는 일과 주의할 일</h3><p>독립적인 작업으로 나눌 수 있고 결과를 테스트할 수 있는 일부터 시도합니다. 요구가 모호하거나 변경을 되돌리기 어려운 작업은 범위를 줄이고 중간 승인 단계를 둡니다.</p>
+ <p>자동화하는 단계가 늘어나도 목표와 합격 기준을 정하는 책임은 사람에게 있습니다. 다음 강의에서는 결과를 확인하는 테스트와 검증 절차를 구성합니다.</p></aside>
     </section>
 
     
@@ -3082,7 +3024,7 @@ model: sonnet
         <ul class="bullets">
           <li>이번 주 과제에서 막힌 지점부터 함께 풀기</li>
           <li>내 업무에 검증(하네스)을 직접 설계해, AI가 기준을 통과할 때까지 다시 하게 만들기</li>
-          <li>언제 울트라코드에 맡기고 언제 맡기지 않을지 판단하기</li>
+          <li>언제 자율 실행에 맡기고 언제 맡기지 않을지 판단하기</li>
           <li><strong>하네스<button type="button" class="modal-trigger" data-modal="m-harness" aria-label="하네스 설명">i</button></strong>: 테스트 입력과 평가 기준을 만들어 결과가 제대로 나왔는지 자동으로 확인하기</li>
         </ul>
 
@@ -3140,7 +3082,7 @@ model: sonnet
             <li id="fn17"><a href="https://code.claude.com/docs/en/vs-code" target="_blank" rel="noopener">VS Code · Claude Code</a></li>
             <li id="fn18"><a href="https://code.claude.com/docs/en/jetbrains" target="_blank" rel="noopener">JetBrains · Claude Code</a></li>
             <li id="fn19"><a href="https://git-scm.com/" target="_blank" rel="noopener">Git 공식 사이트</a></li>
-            <li id="fn20"><a href="https://docs.claude.com/en/docs/build-with-claude/vision" target="_blank" rel="noopener">이미지(비전) · Claude 문서</a></li>
+            
           </ol>
         </div>
       </aside>
@@ -3336,22 +3278,8 @@ model: sonnet
   <div class="modal-overlay" id="m-models">
     <div class="modal-box">
       <button type="button" class="modal-close" aria-label="닫기">✕</button>
-      <div class="modal-header"><h3 class="modal-title">Claude 모델: Opus · Sonnet · Haiku</h3></div>
-      <div class="modal-body">
-        <p>같은 Claude의 <strong>세 가지 등급</strong>입니다. 뒤의 숫자(4.8 등)는 버전입니다.</p>
-        <ul>
-          <li><strong>Opus</strong>: 가장 똑똑함. 설계·판단 같은 가장 까다로운 역할</li>
-          <li><strong>Sonnet</strong>: 균형. 대부분의 일상 역할</li>
-          <li><strong>Haiku</strong>: 가장 빠름. 단순 분류·변환</li>
-        </ul>
-        <div class="modal-section">
-          <div class="modal-section-title">고르는 감각</div>
-          <p>비쌀수록 좋은 게 아니라 <strong>일의 난이도</strong>에 맞춰 고르는 것이 핵심입니다. 요즘은 대부분 Sonnet으로 충분합니다.</p>
-        </div>
-        <p class="modal-src">출처:
-          <a href="https://docs.claude.com/en/docs/about-claude/models/overview" target="_blank" rel="noopener">[14] 모델 개요</a>
-        </p>
-      </div>
+      <div class="modal-header"><h3 class="modal-title">작업에 맞는 모델 선택</h3></div>
+      <div class="modal-body"><p>모델의 이름이나 가격만으로 적합성을 판단하지 않습니다. 설계, 구현, 분류처럼 맡길 작업을 정한 뒤 같은 예제로 품질과 응답 시간, 비용을 비교합니다.</p><p>사용 가능한 모델과 가격, 이용 조건은 실제 사용하는 서비스의 공식 안내에서 확인합니다.</p></div>
     </div>
   </div>
 
