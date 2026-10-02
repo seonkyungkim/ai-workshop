@@ -1294,7 +1294,7 @@ body[data-mode="doc"] .lead { max-width: 100%; }
     .s-lead, .s-note, .s-desc, .s-compare p, .s-compare li, .s-call, .s-bullets li, .s-flow .s-step p, .s-kv td { text-wrap: pretty; }
   </style>
 <style>.course-nav{display:flex;gap:16px;white-space:nowrap}.course-nav a{font-size:14px;color:inherit;text-decoration:none}.course-nav a[aria-current]{font-weight:700;text-decoration:underline;text-underline-offset:5px}.topbar{gap:12px}@media(max-width:720px){.topbar{height:auto;min-height:56px;flex-wrap:wrap;padding:10px 16px}.brand-week,.brand-sep{display:none}.course-nav{margin-left:auto}}</style><style>@media(max-width:720px){.cards.four{grid-template-columns:repeat(2,minmax(0,1fr))}.cards article{min-width:0;overflow-wrap:anywhere}}</style><link rel="stylesheet" href="./theme.css"><link rel="stylesheet" href="./workshop.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans+KR:wght@500;600;700&amp;display=swap"></head>
-<body data-mode="doc" data-editorial="20261002">
+<body data-mode="doc" data-editorial="20261002" data-course-refinement="20261002">
 
   <header class="topbar">
     <div class="brand">
@@ -1401,7 +1401,7 @@ body[data-mode="doc"] .lead { max-width: 100%; }
     <section class="unit" id="slide-recap" data-step="복습">
       <div class="slide-copy">
         <div class="chapter">Week 3 · 복습</div>
-        <h2>지난 2주 복습과<br><em>오늘 할 일</em></h2>
+        <h2>지난 2주 복습과 <em>오늘 할 일</em></h2>
         <p class="lead">하나의 업무 흐름을 3주에 걸쳐 발전시켜 왔습니다. 이번 주는 여기에 "검증"을 추가합니다</p>
 
         <div class="table-scroll" tabindex="0" role="region" aria-label="표: 가로로 스크롤할 수 있습니다"><table class="slide-table compare">
@@ -1426,7 +1426,7 @@ body[data-mode="doc"] .lead { max-width: 100%; }
 
         <h4>특히 살펴볼 항목: 명세의 '검증'</h4>
         <p>
-          1주차 명세 4구조에서 가장 자주 빠뜨리는 칸이 <strong>검증</strong>이었습니다. "이게 빠지면 반쪽짜리 자동화"라고 했습니다.
+          1주차 명세 4구조에서 가장 자주 빠뜨리는 칸이 <strong>검증</strong>이었습니다. "결과 확인 기준도 함께 작성"라고 했습니다.
           2주차에는 그 검증을 <em>셀 수 있는 조건</em>으로 적어 검증 게이트를 만들었습니다.
           오늘은 그 검증 칸이 <em>중심 주제</em>입니다. 입력·단계·출력은 이미 작동하고 있으니 남은 것은 "결과가 맞는지 어떻게 자동으로 아는가"입니다.
         </p>
@@ -1452,7 +1452,7 @@ body[data-mode="doc"] .lead { max-width: 100%; }
     <section class="unit" id="slide-unblock" data-step="과제">
       <div class="slide-copy">
         <div class="chapter">Week 3 · 함께 풀기</div>
-        <h2>지난주 과제<br><em>막힌 점부터</em></h2>
+        <h2>지난주 과제 <em>막힌 점부터</em></h2>
         <p class="lead">막힌 지점은 실패가 아니라 오늘 수업의 출발점입니다. 가장 흔한 세 가지부터 함께 풉니다</p>
       </div>
 
@@ -1489,10 +1489,10 @@ body[data-mode="doc"] .lead { max-width: 100%; }
     <section class="unit" id="slide-problem" data-step="04">
       <div class="slide-copy">
         <div class="chapter">PART 1 · 왜 하네스인가 ①</div>
-        <h2>"다 했어요"를<br><em>믿을 수 있나</em></h2>
+        <h2>"다 했어요"를 <em>믿을 수 있나</em></h2>
         <p class="lead">AI는 늘 자신만만하게 완료를 보고합니다. 문제는 그 보고가 맞는지 그 자체로는 알 수 없다는 것</p>
 
-        <div class="cards">
+        <div class="cards course-topics">
           <article>
             <span>01 빠뜨림</span>
             <h3>조용한 누락</h3>
@@ -1500,7 +1500,7 @@ body[data-mode="doc"] .lead { max-width: 100%; }
           </article>
           <article>
             <span>02 그럴듯한 허구</span>
-            <h3>없는 걸 지어냄</h3>
+            <h3>근거 없는 내용 생성</h3>
             <p>출처에 없던 수치를 그럴듯한 모양으로 채워 넣습니다.</p>
           </article>
           <article>
@@ -1518,14 +1518,14 @@ body[data-mode="doc"] .lead { max-width: 100%; }
           결과가 실제로 기준을 충족했다는 <strong>증명</strong>은 아닙니다. 사람도 자신이 만든 결과를 직접 채점하면 후해집니다. AI도 자기 산출물에 너그럽습니다(2주차에서 "자기 결과 자기 검토"의 모순으로 다뤘습니다).
         </p>
 
-        <h4>믿을 수 없게 만드는 세 가지 실패</h4>
+        <h4>결과에서 확인할 세 가지 오류</h4>
         <ul class="bullets">
           <li><strong>조용한 누락</strong>: 열 줄 중 아홉 줄이 완벽하면 빠진 한 줄(담당자·마감일)은 잘 보이지 않습니다. 그래서 사람이 매번 전수 검사하기 어렵습니다.</li>
           <li><strong>그럴듯한 허구(환각<button type="button" class="modal-trigger" data-modal="m-hallucination" aria-label="환각·할루시네이션 설명">i</button>)</strong>: 자료에 없던 숫자·날짜를 <em>형식만 맞게</em> 지어내면 틀린 답일수록 오히려 더 그럴듯해 보입니다.</li>
           <li><strong>기준 이탈</strong>: "경영진 보고용 톤"이나 "한 줄에 한 성과" 같은 약속을 조금씩 어겨도 AI는 그걸 실패로 인식하지 않고 "완료"라고 보고합니다.</li>
         </ul>
 
-        <h4>핵심 전환: 주장(claim)에서 증명(proof)으로</h4>
+        <h4>완료 보고와 검증 결과의 구분</h4>
         <p>
           그래서 자동화를 믿고 맡기려면 "맞게 됐다고 <em>말하게</em>" 하는 대신 "기준을 통과했다고 <em>증명하게</em>" 해야 합니다.
           증명의 언어는 줄글이 아니라 <strong>통과 / 불통과 신호</strong>입니다. 누가 봐도 같은 결론이 나오는 신호여야 사람이 매번 들여다보지 않아도 품질이 지켜집니다.
@@ -1540,7 +1540,7 @@ body[data-mode="doc"] .lead { max-width: 100%; }
     <section class="unit" id="slide-harness" data-step="05">
       <div class="slide-copy">
         <div class="chapter">PART 1 · 왜 하네스인가 ②</div>
-        <h2>결과를 자동으로 채점하는<br><em>하네스</em></h2>
+        <h2>결과를 자동으로 채점하는 <em>하네스</em></h2>
         <p class="lead">테스트 입력과 합격 기준을 미리 정해 두고 결과를 그 기준에 맞춰 자동 채점하는 시험 장치</p>
 
         <div class="table-scroll" tabindex="0" role="region" aria-label="표: 가로로 스크롤할 수 있습니다"><table class="slide-table compare">
@@ -1611,7 +1611,7 @@ body[data-mode="doc"] .lead { max-width: 100%; }
     <section class="unit" id="slide-why" data-step="06">
       <div class="slide-copy">
         <div class="chapter">PART 1 · 왜 하네스인가 ③</div>
-        <h2>자율성이 오를수록<br><em>검증이 통제점</em></h2>
+        <h2>자율성이 오를수록 <em>검증이 통제점</em></h2>
         <p class="lead">AI가 더 많이, 더 빨리, 더 자율적으로 일할수록 사람이 통제할 수 있는 지점은 검증 하나로 좁혀집니다</p>
 
         <div class="table-scroll" tabindex="0" role="region" aria-label="표: 가로로 스크롤할 수 있습니다"><table class="slide-table compare">
@@ -1671,10 +1671,10 @@ body[data-mode="doc"] .lead { max-width: 100%; }
     <section class="unit" id="slide-parts" data-step="07">
       <div class="slide-copy">
         <div class="chapter">PART 2 · 검증 하네스의 구성 ①</div>
-        <h2>검증 하네스를 이루는<br><em>네 가지 구성 요소</em></h2>
+        <h2>검증 하네스를 이루는 <em>네 가지 구성 요소</em></h2>
         <p class="lead">거창한 시스템이 아닙니다. 테스트 세트·채점표·게이트·리포트 이 네 가지가 검증 하네스입니다</p>
 
-        <div class="cards four">
+        <div class="cards four course-topics">
           <article><span>①</span><h3>테스트 세트</h3><p>정상·경계·불량 입력을 묶은 검증 입력</p></article>
           <article><span>②</span><h3>채점표(루브릭)</h3><p>항목별 점수와 합격선</p></article>
           <article><span>③</span><h3>게이트</h3><p>통과만 통과, 미달은 되돌림</p></article>
@@ -1701,17 +1701,17 @@ body[data-mode="doc"] .lead { max-width: 100%; }
           오늘은 여기에 <em>테스트 세트(①)</em>와 <em>리포트(④)</em>를 추가하고 ②를 한 줄에서 표로 확장합니다.
         </div>
         <p>다음 네 꼭지에서 하나씩 봅니다. 각 꼭지 끝의 <strong> 직접 해보기</strong> 프롬프트를 순서대로 이어 붙이면 내 하네스 하나가 완성됩니다.</p>
-      <figure class="learning-diagram" id="diagram-validation"><figcaption>검증 절차의 전체 구성</figcaption><ol class="diagram-steps"><li><strong>테스트 입력</strong><span>정상·경계·불량 사례를 준비합니다.</span></li><li><strong>자동화 실행</strong><span>같은 절차로 결과를 생성합니다.</span></li><li><strong>규칙·AI 평가</strong><span>형식 검사와 필요한 정성 평가를 합니다.</span></li><li><strong>판정·기록</strong><span>통과 여부와 실패 사유를 남깁니다.</span></li></ol><p class="diagram-note">자동 평가의 통과는 정한 검사 범위를 충족했다는 뜻입니다. 검사하지 않은 오류까지 없다는 의미는 아닙니다.</p></figure></aside>
+      <figure class="learning-diagram" id="diagram-validation"><figcaption>검증 절차의 전체 구성</figcaption><div class="diagram-layout"><svg class="course-flow" viewBox="0 0 344 344" role="img" aria-labelledby="course-arrow-3-0-title"><title id="course-arrow-3-0-title">검증 절차의 전체 구성</title><defs><marker id="course-arrow-3-0" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10Z"></path></marker></defs><rect x="92" y="16" width="160" height="48" rx="5"></rect><text x="172" y="45" text-anchor="middle">테스트 입력</text><path d="M172 64 V94" marker-end="url(#course-arrow-3-0)"></path><rect x="92" y="102" width="160" height="48" rx="5"></rect><text x="172" y="131" text-anchor="middle">자동화 실행</text><path d="M172 150 V180" marker-end="url(#course-arrow-3-0)"></path><rect x="92" y="188" width="160" height="48" rx="5"></rect><text x="172" y="217" text-anchor="middle">규칙·AI 평가</text><path d="M172 236 V266" marker-end="url(#course-arrow-3-0)"></path><rect x="92" y="274" width="160" height="48" rx="5"></rect><text x="172" y="303" text-anchor="middle">판정·기록</text></svg><dl class="diagram-details"><dt>테스트 입력</dt><dd>정상·경계·불량 사례를 준비합니다.</dd><dt>자동화 실행</dt><dd>같은 절차로 결과를 생성합니다.</dd><dt>규칙·AI 평가</dt><dd>형식 검사와 필요한 정성 평가를 합니다.</dd><dt>판정·기록</dt><dd>통과 여부와 실패 사유를 남깁니다.</dd></dl></div><p class="diagram-note">자동 평가의 통과는 정한 검사 범위를 충족했다는 뜻입니다. 검사하지 않은 오류까지 없다는 의미는 아닙니다.</p></figure></aside>
     </section>
 
     
     <section class="unit" id="slide-cases" data-step="08">
       <div class="slide-copy">
         <div class="chapter">PART 2 · 검증 하네스의 구성 ②</div>
-        <h2>입력 하나에서<br><em>테스트 세트로</em></h2>
+        <h2>입력 하나에서 <em>테스트 세트로</em></h2>
         <p class="lead">정상 입력만 넣으면 늘 통과합니다. 경계와 불량 케이스를 함께 넣어야 검증이 제대로 작동합니다</p>
 
-        <div class="cards">
+        <div class="cards course-topics">
           <article><span>정상 (happy)</span><h3>평범한 입력</h3><p>제대로 처리하면 통과해야 하는 표준 케이스</p></article>
           <article><span>경계 (edge)</span><h3>까다로운 입력</h3><p>빈 칸, 아주 긴 것, 형식이 조금 다른 것</p></article>
           <article><span>불량 (must-fail)</span><h3>일부러 깨진 입력</h3><p>반드시 탈락해야 하는 입력</p></article>
@@ -1763,7 +1763,7 @@ body[data-mode="doc"] .lead { max-width: 100%; }
     <section class="unit" id="slide-rubric" data-step="09">
       <div class="slide-copy">
         <div class="chapter">PART 2 · 검증 하네스의 구성 ③</div>
-        <h2>한 줄 기준에서<br><em>채점표로</em></h2>
+        <h2>한 줄 기준에서 <em>채점표로</em></h2>
         <p class="lead">"잘 썼나"를 항목으로 쪼개고, 각 항목을 셀 수 있게, 합격선을 숫자로</p>
 
         <div class="table-scroll" tabindex="0" role="region" aria-label="표: 가로로 스크롤할 수 있습니다"><table class="slide-table compact">
@@ -1835,7 +1835,7 @@ body[data-mode="doc"] .lead { max-width: 100%; }
     <section class="unit" id="slide-judge" data-step="10">
       <div class="slide-copy">
         <div class="chapter">PART 2 · 검증 하네스의 구성 ④</div>
-        <h2>누가 채점하나<br><em>규칙 검사와 AI 평가</em></h2>
+        <h2>누가 채점하나 <em>규칙 검사와 AI 평가</em></h2>
         <p class="lead">정답표로 셀 수 있는 건 기계가 채점하고 읽어 봐야 아는 건 또 다른 AI가 채점합니다</p>
 
         <div class="table-scroll" tabindex="0" role="region" aria-label="표: 가로로 스크롤할 수 있습니다"><table class="slide-table compare">
@@ -1920,7 +1920,7 @@ body[data-mode="doc"] .lead { max-width: 100%; }
     <section class="unit" id="slide-gate" data-step="11">
       <div class="slide-copy">
         <div class="chapter">PART 2 · 검증 하네스의 구성 ⑤</div>
-        <h2>통과만 통과시키는<br><em>게이트와 리포트</em></h2>
+        <h2>통과만 통과시키는 <em>게이트와 리포트</em></h2>
         <p class="lead">채점이 끝나면 두 가지가 남습니다. 미달을 되돌리는 게이트, 그리고 미달 사유를 적은 리포트입니다</p>
 
         <ol class="pipeline pipeline--course">
@@ -1975,14 +1975,14 @@ PASS  잡담섞임     필수 2/2 · 점수 5/6  (잡담 제거 확인)
         <div class="callout">
           <strong>핵심</strong> 게이트는 "나쁜 결과가 나가지 않게" 하고 리포트는 "왜 나빴는지 남게" 합니다. 앞이 품질을 지키고 뒤가 다음 개선에 도움이 됩니다.
         </div>
-      <figure class="learning-diagram" id="diagram-retry"><figcaption>검증 실패와 재시도 처리</figcaption><ol class="diagram-steps"><li><strong>결과 생성</strong><span>입력과 요청에 따라 처리합니다.</span></li><li><strong>검증</strong><span>필수 조건과 합격 기준을 검사합니다.</span></li><li><strong>결과 분기</strong><span>통과·수정·사람 확인으로 나눕니다.</span></li></ol><div class="diagram-branches"><p><strong>통과</strong> 결과를 저장하고 실행 기록을 남깁니다.</p><p><strong>미달, 재시도 가능</strong> 실패 사유를 반영해 다시 생성합니다.</p><p><strong>횟수 초과·판단 어려움</strong> 실행을 멈추고 사람에게 확인을 요청합니다.</p></div><p class="diagram-note">재시도 횟수와 중단 조건을 먼저 정합니다. 실패를 무조건 반복 실행으로 처리하지 않습니다.</p></figure></aside>
+      <figure class="learning-diagram" id="diagram-retry"><figcaption>검증 실패와 재시도 처리</figcaption><div class="diagram-layout"><svg class="course-flow" viewBox="0 0 344 566" role="img" aria-labelledby="course-arrow-3-1-title"><title id="course-arrow-3-1-title">검증 실패와 재시도 처리</title><defs><marker id="course-arrow-3-1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10Z"></path></marker></defs><rect x="92" y="16" width="160" height="48" rx="5"></rect><text x="172" y="45" text-anchor="middle">결과 생성</text><path d="M172 64 V100" marker-end="url(#course-arrow-3-1)"></path><rect x="92" y="106" width="160" height="48" rx="5"></rect><text x="172" y="135" text-anchor="middle">기준 검증</text><path d="M172 154 V190" marker-end="url(#course-arrow-3-1)"></path><polygon points="172,196 252,240 172,284 92,240"></polygon><text x="172" y="245" text-anchor="middle">기준 충족?</text><path d="M172 284 V324" marker-end="url(#course-arrow-3-1)"></path><text class="edge-label" x="184" y="310">예</text><rect x="92" y="330" width="160" height="48" rx="5"></rect><text x="172" y="359" text-anchor="middle">저장·실행 기록</text><path d="M92 240 H22 V418 H86" marker-end="url(#course-arrow-3-1)"></path><text class="edge-label" x="25" y="220">아니요</text><rect x="92" y="394" width="160" height="48" rx="5"></rect><text x="172" y="423" text-anchor="middle">실패 원인 확인</text><path d="M252 418 H324 V40 H258" marker-end="url(#course-arrow-3-1)"></path><text class="edge-label" x="252" y="390">재시도 가능</text><path d="M172 442 V494" marker-end="url(#course-arrow-3-1)"></path><text class="edge-label" x="26" y="480">횟수 초과·판단 어려움</text><rect x="92" y="500" width="160" height="48" rx="5"></rect><text x="172" y="529" text-anchor="middle">중단·사람 확인</text></svg><dl class="diagram-details"><dt>결과 생성</dt><dd>입력과 요청에 따라 처리합니다.</dd><dt>검증</dt><dd>필수 조건과 합격 기준을 검사합니다.</dd><dt>결과 분기</dt><dd>통과·수정·사람 확인으로 나눕니다.</dd></dl></div><div class="diagram-branches"><p><strong>통과</strong> 결과를 저장하고 실행 기록을 남깁니다.</p><p><strong>미달, 재시도 가능</strong> 실패 사유를 반영해 다시 생성합니다.</p><p><strong>횟수 초과·판단 어려움</strong> 실행을 멈추고 사람에게 확인을 요청합니다.</p></div><p class="diagram-note">재시도 횟수와 중단 조건을 먼저 정합니다. 실패를 무조건 반복 실행으로 처리하지 않습니다.</p></figure></aside>
     </section>
 
     
     <section class="unit" id="slide-practice" data-step="실습">
       <div class="slide-copy">
         <div class="chapter">직접 해보기 · 들어가기</div>
-        <h2>내 자동화에<br><em>검증 하네스 추가하기</em></h2>
+        <h2>내 자동화에 <em>검증 하네스 추가하기</em></h2>
         <p class="lead">2주차에 만든 자동화에 테스트 세트·채점표·게이트·리포트를 직접 추가합니다</p>
       </div>
 
@@ -2024,7 +2024,7 @@ PASS  잡담섞임     필수 2/2 · 점수 5/6  (잡담 제거 확인)
     <section class="unit" id="slide-walkthrough" data-step="예시">
       <div class="slide-copy">
         <div class="chapter">직접 해보기 · 전체 예시</div>
-        <h2>주간보고에 검증 하네스를<br><em>처음부터 끝까지</em></h2>
+        <h2>주간보고에 검증 하네스를 <em>처음부터 끝까지</em></h2>
         <p class="lead">개념에서 흩어져 있던 조각을 하나로 모아 실제로 작동하는 하네스 하나를 그대로 따라 만듭니다</p>
       </div>
 
@@ -2162,7 +2162,7 @@ reports/                      # ⑤ 실행 기록이 쌓이는 곳</pre>
     <section class="unit" id="slide-practice-a" data-step="실습A">
       <div class="slide-copy">
         <div class="chapter">직접 해보기 · 트랙 A</div>
-        <h2>정형 업무<br><em>기계 채점 하네스</em></h2>
+        <h2>정형 업무 <em>기계 채점 하네스</em></h2>
         <p class="lead">셀 수 있는 기준을 검사 규칙으로 만들어 빠르고 일관되게 자동 채점</p>
       </div>
 
@@ -2243,7 +2243,7 @@ print("PASS" if not fails else "FAIL · " + ", ".join(fails))</pre>
     <section class="unit" id="slide-practice-b" data-step="실습B">
       <div class="slide-copy">
         <div class="chapter">직접 해보기 · 트랙 B</div>
-        <h2>정성 업무<br><em>AI 채점관 하네스</em></h2>
+        <h2>정성 업무 <em>AI 채점관 하네스</em></h2>
         <p class="lead">정답표가 없는 톤·설득력·완결성을 루브릭을 갖춘 또 다른 AI로 채점</p>
       </div>
 
@@ -2294,7 +2294,7 @@ print("PASS" if not fails else "FAIL · " + ", ".join(fails))</pre>
     <section class="unit" id="slide-pitfalls" data-step="15">
       <div class="slide-copy">
         <div class="chapter">실전 · 주의 ①</div>
-        <h2>검증 하네스도<br><em>잘못 만들 수 있다</em></h2>
+        <h2>검증 하네스도 <em>잘못 만들 수 있다</em></h2>
         <p class="lead">검증 장치를 두는 것과 잘 두는 것은 다릅니다. 흔한 실수 네 가지와 해결책</p>
 
         <div class="table-scroll" tabindex="0" role="region" aria-label="표: 가로로 스크롤할 수 있습니다"><table class="slide-table compact">
@@ -2343,7 +2343,7 @@ print("PASS" if not fails else "FAIL · " + ", ".join(fails))</pre>
     <section class="unit" id="slide-when" data-step="16">
       <div class="slide-copy">
         <div class="chapter">실전 · 주의 ②</div>
-        <h2>모든 일에<br><em>하네스가 필요한 건 아니다</em></h2>
+        <h2>모든 일에 <em>하네스가 필요한 건 아니다</em></h2>
         <p class="lead">자율성·반복·위험에 비례해 추가합니다. 작고 일회적이고 안전한 일에는 과설계입니다</p>
 
         <div class="table-scroll" tabindex="0" role="region" aria-label="표: 가로로 스크롤할 수 있습니다"><table class="slide-table compare">
@@ -2389,10 +2389,10 @@ print("PASS" if not fails else "FAIL · " + ", ".join(fails))</pre>
     <section class="unit" id="slide-practical" data-step="실무">
       <div class="slide-copy">
         <div class="chapter">실전 · 실무 팁</div>
-        <h2>막혔을 때와<br><em>안전하게 쓰기</em></h2>
+        <h2>막혔을 때와 <em>안전하게 쓰기</em></h2>
         <p class="lead">시스템을 직접 만들다 보면 반드시 막힙니다. 그때 쓰는 방법과 사내 정보를 다룰 때의 기준</p>
 
-        <div class="cards">
+        <div class="cards course-topics">
           <article><span>막혔을 때</span><h3>계획·분할·되돌리기</h3><p>계획 모드로 먼저 보고, 작게 쪼개고, Esc로 되돌린다</p></article>
           <article><span>사내 정보</span><h3>나가도 되는가</h3><p>외부로 나가도 괜찮은 것만 아니면 가리거나 뺀다</p></article>
           <article><span>보존·공유</span><h3>파일과 git</h3><p>.claude 폴더를 버전 관리해 되돌리고 나눈다</p></article>
@@ -2434,7 +2434,7 @@ print("PASS" if not fails else "FAIL · " + ", ".join(fails))</pre>
     <section class="unit" id="slide-slop" data-step="슬롭">
       <div class="slide-copy">
         <div class="chapter">실전 · 산출물 품질</div>
-        <h2>산출물이 'AI가 만든 티'<br><em>나지 않게</em></h2>
+        <h2>산출물이 'AI가 만든 티' <em>나지 않게</em></h2>
         <p class="lead">독자가 이해하기 쉬운 문장과 구성인지 확인하고, 반복 표현과 불필요한 장식을 줄입니다.</p>
 
         <div class="table-scroll" tabindex="0" role="region" aria-label="표: 가로로 스크롤할 수 있습니다"><table class="slide-table compact">
@@ -2482,7 +2482,7 @@ print("PASS" if not fails else "FAIL · " + ", ".join(fails))</pre>
     <section class="unit" id="slide-scale" data-step="17">
       <div class="slide-copy">
         <div class="chapter">실전 · 확장</div>
-        <h2>하네스가 있으면<br><em>비로소 믿고 맡긴다</em></h2>
+        <h2>하네스가 있으면 <em>비로소 믿고 맡긴다</em></h2>
         <p class="lead">검증이 정교해질수록 더 자율적인 도구에 더 큰 일을 맡길 수 있습니다</p>
 
         <ol class="pipeline pipeline--core">
@@ -2619,13 +2619,13 @@ description: 주간보고 초안을 rubric-주간보고.md 기준으로 채점�
     <section class="unit" id="slide-wrap" data-step="18">
       <div class="slide-copy">
         <div class="chapter">마무리 · 정리</div>
-        <h2>오늘의<br><em>정리</em></h2>
+        <h2>오늘의 <em>정리</em></h2>
         <p class="lead">오늘 배운 검증 하네스를 한 장으로 되짚습니다</p>
       </div>
 
       <aside class="handout">
         <h3>오늘의 핵심</h3>
-        <div class="cards">
+        <div class="cards course-topics">
           <article><span>01</span><h3>주장 → 증명</h3><p>"다 했어요" 대신 통과/불통과 신호로</p></article>
           <article><span>02</span><h3>검증 하네스 구성 요소</h3><p>테스트 세트 · 채점표 · 게이트 · 리포트</p></article>
           <article><span>03</span><h3>두 채점관</h3><p>셀 수 있으면 기계, 읽어야 하면 AI 채점관</p></article>

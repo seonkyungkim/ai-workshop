@@ -1299,7 +1299,7 @@ body[data-mode="doc"] .lead { max-width: 100%; }
     .s-bullets li, .s-flow .s-step p, .s-kv td, .pslide--cover .s-sub { text-wrap: pretty; }
   </style>
 <style>.course-nav{display:flex;gap:16px;white-space:nowrap}.course-nav a{font-size:14px;color:inherit;text-decoration:none}.course-nav a[aria-current]{font-weight:700;text-decoration:underline;text-underline-offset:5px}.topbar{gap:12px}@media(max-width:720px){.topbar{height:auto;min-height:56px;flex-wrap:wrap;padding:10px 16px}.brand-week,.brand-sep{display:none}.course-nav{margin-left:auto}}</style><style>@media(max-width:720px){.cards.four{grid-template-columns:repeat(2,minmax(0,1fr))}.cards article{min-width:0;overflow-wrap:anywhere}}</style><link rel="stylesheet" href="./theme.css"><link rel="stylesheet" href="./workshop.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans+KR:wght@500;600;700&amp;display=swap"></head>
-<body data-mode="doc" data-editorial="20261002">
+<body data-mode="doc" data-editorial="20261002" data-course-refinement="20261002">
 
   <header class="topbar">
     <div class="brand">
@@ -1327,8 +1327,8 @@ body[data-mode="doc"] .lead { max-width: 100%; }
       <li><a href="#slide-7">에이전트</a></li>
       <li><a href="#slide-8">단일 에이전트의 한계</a></li>
       <li><a href="#slide-9">오케스트레이션</a></li>
-      <li><a href="#slide-ladder">한 조각씩 더하기</a></li>
-      <li><a href="#slide-10">막힐 때 키우는 법</a></li>
+      <li><a href="#slide-ladder">단계별 기능 보완</a></li>
+      <li><a href="#slide-10">문제 유형별 개선 방법</a></li>
       <li><a href="#slide-11">에이전트 설계</a></li>
       <li><a href="#slide-12">세 패턴 엮기</a></li>
       <li class="toc-group">직접 해보기</li>
@@ -1393,10 +1393,7 @@ body[data-mode="doc"] .lead { max-width: 100%; }
           <li><strong>오케스트레이션</strong>: 그 흐름만으로 안 되는 일을, 역할을 나눈 여러 AI가 서로 판단하며 처리하게 하는 방법입니다.</li>
         </ol>
 
-        <p>
-          이번 시간의 목표는 직접 다 만드는 것이 아니라, 흐름을 이해하고 마음에 드는 것 하나를 가볍게 따라 해보는 것입니다.
-          새 기능 대부분은 AI에게 한마디 하면 만들어지므로 따로 익혀야 할 사용법이 없습니다.
-        </p>
+        <p>이번 강의에서는 도구 연결, 반복 실행, 역할 분담을 살펴봅니다. 먼저 각 기능이 필요한 상황을 이해한 뒤, 자신의 업무에 맞는 예시 하나를 선택해 실행하고 결과를 확인합니다.</p>
       </aside>
     </section>
 
@@ -1404,10 +1401,10 @@ body[data-mode="doc"] .lead { max-width: 100%; }
     <section class="unit" id="slide-recap" data-step="복습">
       <div class="slide-copy">
         <div class="chapter">Week 2 · 30초 복습</div>
-        <h2>지난주에 정한 것<br><em>빠르게 복습</em></h2>
+        <h2>지난주에 정한 것 <em>빠르게 복습</em></h2>
         <p class="lead">1주차에 고른 자동화 후보, 이번 내용의 토대가 되는 세 가지</p>
 
-        <div class="cards">
+        <div class="cards course-topics">
           <article>
             <span>후보 고르기</span>
             <h3>다섯 가지 특성</h3>
@@ -1445,7 +1442,7 @@ body[data-mode="doc"] .lead { max-width: 100%; }
           <tbody><tr><th>입력</th><td>무엇이 들어오는가 (어떤 파일·어디에 저장된 무엇)</td></tr>
           <tr><th>단계</th><td>어떤 순서로 처리하는가</td></tr>
           <tr><th>출력</th><td>어디에 어떤 형식으로 나가는가</td></tr>
-          <tr><th>검증</th><td>잘 됐는지 어떻게 판단하는가 (이게 빠지면 반쪽짜리 자동화)</td></tr>
+          <tr><th>검증</th><td>잘 됐는지 어떻게 판단하는가 (결과 확인 기준도 함께 작성)</td></tr>
         </tbody></table></div>
 
         <h4>③ 지난 시간 끝에 이름만 나온 핵심 개념</h4>
@@ -1461,7 +1458,7 @@ body[data-mode="doc"] .lead { max-width: 100%; }
     <section class="unit" id="slide-2" data-step="02">
       <div class="slide-copy">
         <div class="chapter">PART 1 · 파이프라인 ① MCP</div>
-        <h2>AI에 도구를 연결하는 표준<br><em>MCP</em></h2>
+        <h2>AI에 도구를 연결하는 표준 <em>MCP</em></h2>
         <p class="lead">업무 도구(노션, 슬랙, 메일, 캘린더)를 AI가 직접 다루도록 연결하는 표준</p>
 
         <div class="table-scroll" tabindex="0" role="region" aria-label="표: 가로로 스크롤할 수 있습니다"><table class="slide-table compare">
@@ -1535,14 +1532,14 @@ body[data-mode="doc"] .lead { max-width: 100%; }
           출처가 불분명한 외부 서버는 AI에 엉뚱한 지시를 전달할 위험(프롬프트 인젝션<button type="button" class="modal-trigger" data-modal="m-injection" aria-label="프롬프트 인젝션 설명">i</button>)이 있습니다.
           회사 도구와 공식 커넥터 위주로 시작하기를 권합니다.
         </div>
-      <figure class="learning-diagram" id="diagram-mcp"><figcaption>MCP를 통한 업무 도구 연결</figcaption><ol class="diagram-steps"><li><strong>사용자 요청</strong><span>조회하거나 처리할 업무를 설명합니다.</span></li><li><strong>AI 앱</strong><span>MCP 클라이언트가 도구 호출을 연결합니다.</span></li><li><strong>MCP 서버</strong><span>허용된 도구와 데이터 접근을 제공합니다.</span></li><li><strong>업무 서비스</strong><span>노션·슬랙 등의 결과를 반환합니다.</span></li></ol><p class="diagram-note">조회 결과는 반대 순서로 AI 앱에 전달됩니다. 연결했다고 모든 권한이 생기는 것은 아닙니다. 서비스 인증과 허용 범위를 확인해야 합니다.</p></figure></aside>
+      <figure class="learning-diagram" id="diagram-mcp"><figcaption>MCP를 통한 업무 도구 연결</figcaption><div class="diagram-layout"><svg class="course-flow" viewBox="0 0 344 344" role="img" aria-labelledby="course-arrow-2-0-title"><title id="course-arrow-2-0-title">MCP를 통한 업무 도구 연결</title><defs><marker id="course-arrow-2-0" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10Z"></path></marker></defs><rect x="92" y="16" width="160" height="48" rx="5"></rect><text x="172" y="45" text-anchor="middle">사용자 요청</text><path d="M172 64 V94" marker-end="url(#course-arrow-2-0)"></path><rect x="92" y="102" width="160" height="48" rx="5"></rect><text x="172" y="131" text-anchor="middle">AI 앱</text><path d="M172 150 V180" marker-end="url(#course-arrow-2-0)"></path><rect x="92" y="188" width="160" height="48" rx="5"></rect><text x="172" y="217" text-anchor="middle">MCP 서버</text><path d="M172 236 V266" marker-end="url(#course-arrow-2-0)"></path><rect x="92" y="274" width="160" height="48" rx="5"></rect><text x="172" y="303" text-anchor="middle">업무 서비스</text></svg><dl class="diagram-details"><dt>사용자 요청</dt><dd>조회하거나 처리할 업무를 설명합니다.</dd><dt>AI 앱</dt><dd>MCP 클라이언트가 도구 호출을 연결합니다.</dd><dt>MCP 서버</dt><dd>허용된 도구와 데이터 접근을 제공합니다.</dd><dt>업무 서비스</dt><dd>노션·슬랙 등의 결과를 반환합니다.</dd></dl></div><p class="diagram-note">조회 결과는 반대 순서로 AI 앱에 전달됩니다. 연결했다고 모든 권한이 생기는 것은 아닙니다. 서비스 인증과 허용 범위를 확인해야 합니다.</p></figure></aside>
     </section>
 
     
     <section class="unit" id="slide-3" data-step="03">
       <div class="slide-copy">
         <div class="chapter">PART 1 · 파이프라인 ② 슬래시 커맨드</div>
-        <h2>자주 쓰는 요청을 명령어로<br><em>슬래시 커맨드</em></h2>
+        <h2>자주 쓰는 요청을 명령어로 <em>슬래시 커맨드</em></h2>
         <p class="lead"><code>.claude/commands</code>에 둔 마크다운 파일 이름이 그대로 명령어가 되는 방식</p>
 
         <div class="prompt">
@@ -1630,10 +1627,10 @@ body[data-mode="doc"] .lead { max-width: 100%; }
     <section class="unit" id="slide-4" data-step="04">
       <div class="slide-copy">
         <div class="chapter">PART 1 · 파이프라인 ③ 스케줄</div>
-        <h2>정해진 시점에 실행하기<br><em>스케줄 자동화</em></h2>
+        <h2>정해진 시점에 실행하기 <em>스케줄 자동화</em></h2>
         <p class="lead">정해진 시점에 같은 입력으로, 사람 없이 스스로 실행되는 자동화</p>
 
-        <div class="cards">
+        <div class="cards course-topics">
           <article>
             <span>매일 09:00</span>
             <h3>메일 정리</h3>
@@ -1712,7 +1709,7 @@ body[data-mode="doc"] .lead { max-width: 100%; }
     <section class="unit" id="slide-5" data-step="05">
       <div class="slide-copy">
         <div class="chapter">PART 1 · 파이프라인 ④ 합치기</div>
-        <h2>도구 연결과 명령, 일정 실행<br><em>자동화 파이프라인</em></h2>
+        <h2>도구 연결과 명령, 일정 실행 <em>자동화 파이프라인</em></h2>
         <p class="lead">한 작업의 흐름을 처음부터 끝까지 AI가 처리하는 구조</p>
 
         <ol class="pipeline">
@@ -1735,12 +1732,12 @@ body[data-mode="doc"] .lead { max-width: 100%; }
       </div>
 
       <aside class="handout">
-        <h3>세 조각이 합쳐지면</h3>
+        <h3>도구 연결부터 일정 실행까지</h3>
         <p>
           지금까지 다룬 세 가지를 합치면 하나의 구조가 됩니다.
           <strong>MCP</strong>로 AI에게 도구를 연결하고, <strong>슬래시</strong>로 긴 흐름을 한 단어로 묶고,
           <strong>스케줄</strong>로 그 한 단어조차 사람이 누르지 않게 만듭니다.
-          이 세 조각의 합이 자동화 파이프라인입니다.
+          이 세 기능의 연결이 자동화 파이프라인입니다.
           한 작업의 흐름을 처음부터 끝까지 AI가 처리하는 구조입니다.
         </p>
 
@@ -1775,7 +1772,7 @@ body[data-mode="doc"] .lead { max-width: 100%; }
     <section class="unit" id="slide-6" data-step="06">
       <div class="slide-copy">
         <div class="chapter">PART 1 · 한 걸음 더 · Skills</div>
-        <h2>AI가 스스로 꺼내 쓰는 노하우<br><em>Skills</em></h2>
+        <h2>AI가 스스로 꺼내 쓰는 노하우 <em>Skills</em></h2>
         <p class="lead">한 번 만들어 두면 비슷한 일마다 시키지 않아도 같은 품질로 재현되는 노하우</p>
 
         <h3>AI를 확장하는 네 가지 방법</h3>
@@ -1867,7 +1864,7 @@ description: 회의 녹취/메모를 표준 회의록으로 정리한다.
         </ol>
 
         <h4>바로 써볼 만한 스킬: 공식 문서 스킬</h4>
-        <p>직접 만들지 않아도, Anthropic이 공식 제공하는 스킬이 있습니다. 한 번 설치해 두면 문서 작업을 말 한마디로 처리합니다.</p>
+        <p>직접 스킬을 작성하는 방법 외에, 공개된 스킬을 설치해 사용할 수도 있습니다. 사용 전에 처리할 업무, 필요한 권한과 결과 확인 방법을 살펴봅니다.</p>
         <div class="table-scroll" tabindex="0" role="region" aria-label="표: 가로로 스크롤할 수 있습니다"><table class="example-table">
           <tbody><tr><th>PDF</th><td>"이 내용을 PDF 보고서로 만들어줘"</td></tr>
           <tr><th>워드(docx)</th><td>"이 회의록을 Word 문서로 정리해줘"</td></tr>
@@ -1893,7 +1890,7 @@ description: 회의 녹취/메모를 표준 회의록으로 정리한다.
     <section class="unit" id="slide-7" data-step="07">
       <div class="slide-copy">
         <div class="chapter">PART 2 · 오케스트레이션 ① 에이전트</div>
-        <h2>스스로 판단하는 AI<br><em>에이전트</em></h2>
+        <h2>스스로 판단하는 AI <em>에이전트</em></h2>
         <p class="lead">한 번 답하고 끝나지 않고, 결과를 점검해 다음 행동을 스스로 결정하는 AI</p>
 
         <div class="table-scroll" tabindex="0" role="region" aria-label="표: 가로로 스크롤할 수 있습니다"><table class="slide-table compare">
@@ -1948,10 +1945,10 @@ description: 회의 녹취/메모를 표준 회의록으로 정리한다.
     <section class="unit" id="slide-8" data-step="08">
       <div class="slide-copy">
         <div class="chapter">PART 2 · 오케스트레이션 ② 왜 나누나</div>
-        <h2>한 에이전트에 모두 맡길 때의<br><em>한계</em></h2>
+        <h2>한 에이전트에 모두 맡길 때의 <em>한계</em></h2>
         <p class="lead">기획, 실행, 검토를 한 에이전트가 다 맡을 때 생기는 품질 저하</p>
 
-        <div class="cards">
+        <div class="cards course-topics">
           <article>
             <span>01 컨텍스트 과부하</span>
             <h3>앞선 요구사항 누락</h3>
@@ -1993,8 +1990,8 @@ description: 회의 녹취/메모를 표준 회의록으로 정리한다.
     <section class="unit" id="slide-9" data-step="09">
       <div class="slide-copy">
         <div class="chapter">PART 2 · 오케스트레이션 ③ 정의</div>
-        <h2>역할을 나눈 AI 팀<br><em>오케스트레이션</em></h2>
-        <p class="lead">여러 에이전트가 역할을 나누고, 지휘자가 누가 언제 개입할지 정하는 협업 방식</p>
+        <h2>역할을 나눈 AI 팀 <em>오케스트레이션</em></h2>
+        <p class="lead">여러 에이전트에 작업을 나누고, 실행 결과에 따라 다음 작업을 조정하는 방식입니다.</p>
 
         <div class="table-scroll" tabindex="0" role="region" aria-label="표: 가로로 스크롤할 수 있습니다"><table class="slide-table compare">
           <thead>
@@ -2010,31 +2007,19 @@ description: 회의 녹취/메모를 표준 회의록으로 정리한다.
       </div>
 
       <aside class="handout">
-        <h3>이름 그대로 오케스트라</h3>
-        <p>
-          오케스트레이션(orchestration)이라는 단어는 오케스트라에서 왔습니다.
-          각 연주자가 다른 악기를 들고, 지휘자(오케스트레이터)가 전체 흐름을 조율합니다.
-          AI도 마찬가지로 여러 전문 에이전트가 각자 역할을 맡고, 지휘자 역할의 AI가 누구에게 무엇을 시키고 언제 다음으로 넘길지를 결정합니다.
-        </p>
-        <p>
-          파이프라인과의 가장 큰 차이는 <em>판단 후 이동</em>입니다.
-          파이프라인은 무조건 다음 칸으로 갔지만, 오케스트레이션은 결과를 보고
-          통과면 다음으로 미달이면 되돌려서 다시 처리하는 식으로 길을 고를 수 있습니다.
-          또한 서로 상관없는 작업은 동시에(병렬) 돌릴 수도 있습니다.
-        </p>
-        <div class="callout">
-          <strong>핵심</strong> 오케스트레이션은 더 비싼 AI를 쓰는 것이 아니라 역할을 잘 나누는 것입니다.
-          그래서 뒤에서 보겠지만, 이건 코드의 문제가 아니라 <em>구조의 문제</em>입니다.
-        </div>
-      <figure class="learning-diagram" id="diagram-agents"><figcaption>역할을 나눈 작업과 검토</figcaption><ol class="diagram-steps"><li><strong>요청과 기준</strong><span>목표, 입력, 완료 조건을 공유합니다.</span></li><li><strong>작업 분배</strong><span>역할과 작업 간 의존성을 정합니다.</span></li><li><strong>실행</strong><span>담당 작업의 결과와 근거를 만듭니다.</span></li><li><strong>검토</strong><span>기준을 확인하고 완료 또는 수정을 결정합니다.</span></li></ol><div class="diagram-branches"><p><strong>기준 충족</strong> 결과를 합치고 전체 동작을 확인합니다.</p><p><strong>기준 미달</strong> 수정할 항목을 실행 단계에 돌려보냅니다.</p></div><p class="diagram-note">역할을 나눈다고 자동으로 병렬 실행되는 것은 아닙니다. 서로 의존하지 않는 작업만 동시에 진행합니다.</p></figure></aside>
+        <h3>역할 분담과 작업 조정</h3>
+        <p>작업을 조율하는 에이전트는 요청을 분석해 필요한 업무를 나눕니다. 각 에이전트가 맡을 역할과 입력, 결과 형식을 정하고, 전달된 결과를 바탕으로 다음 작업을 결정합니다.</p>
+        <p>미리 정의한 작업 흐름에서도 분기, 재시도와 병렬 실행을 사용할 수 있습니다. 여기서 구분할 점은 이런 기능의 유무가 아니라, 작업 순서와 분담을 미리 정하는지 실행 중 AI가 결과를 보고 조정하는지입니다.</p>
+        <div class="callout">역할을 나누는 것만으로 품질이 보장되지는 않습니다. 각 역할의 책임, 결과 전달 형식과 검증 기준을 함께 정해야 합니다.</div>
+      <figure class="learning-diagram" id="diagram-agents"><figcaption>역할을 나눈 작업과 검토</figcaption><div class="diagram-layout"><svg class="course-flow" viewBox="0 0 344 470" role="img" aria-labelledby="course-arrow-2-1-title"><title id="course-arrow-2-1-title">역할을 나눈 작업과 검토</title><defs><marker id="course-arrow-2-1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10Z"></path></marker></defs><rect x="92" y="16" width="160" height="48" rx="5"></rect><text x="172" y="45" text-anchor="middle">요청과 기준</text><path d="M172 64 V96" marker-end="url(#course-arrow-2-1)"></path><rect x="92" y="102" width="160" height="48" rx="5"></rect><text x="172" y="131" text-anchor="middle">작업 분배</text><path d="M172 150 V174 H86 V198" marker-end="url(#course-arrow-2-1)"></path><path d="M172 174 H258 V198" marker-end="url(#course-arrow-2-1)"></path><rect x="6" y="204" width="150" height="48" rx="5"></rect><text x="81" y="233" text-anchor="middle">독립 작업 A</text><rect x="178" y="204" width="132" height="48" rx="5"></rect><text x="244" y="233" text-anchor="middle">독립 작업 B</text><path d="M86 252 V280 H172 V302" marker-end="url(#course-arrow-2-1)"></path><path d="M258 252 V280 H172" marker-end="url(#course-arrow-2-1)"></path><rect x="92" y="308" width="160" height="48" rx="5"></rect><text x="172" y="337" text-anchor="middle">결과 통합·검토</text><path d="M172 356 V392" marker-end="url(#course-arrow-2-1)"></path><text class="edge-label" x="184" y="380">통과</text><rect x="92" y="398" width="160" height="48" rx="5"></rect><text x="172" y="427" text-anchor="middle">완료</text><path d="M252 332 H326 V126 H258" marker-end="url(#course-arrow-2-1)"></path><text class="edge-label" x="278" y="300">수정</text></svg><dl class="diagram-details"><dt>요청과 기준</dt><dd>목표, 입력, 완료 조건을 공유합니다.</dd><dt>작업 분배</dt><dd>역할과 작업 간 의존성을 정합니다.</dd><dt>실행</dt><dd>담당 작업의 결과와 근거를 만듭니다.</dd><dt>검토</dt><dd>기준을 확인하고 완료 또는 수정을 결정합니다.</dd></dl></div><div class="diagram-branches"><p><strong>기준 충족</strong> 결과를 합치고 전체 동작을 확인합니다.</p><p><strong>기준 미달</strong> 수정할 항목을 실행 단계에 돌려보냅니다.</p></div><p class="diagram-note">역할을 나눈다고 자동으로 병렬 실행되는 것은 아닙니다. 서로 의존하지 않는 작업만 동시에 진행합니다.</p></figure></aside>
     </section>
 
     
     <section class="unit" id="slide-ladder" data-step="발전">
       <div class="slide-copy">
-        <div class="chapter">PART 2 · 오케스트레이션 ④ 한 조각씩 더하기</div>
-        <h2>파이프라인에 한 조각씩<br><em>더하면 된다</em></h2>
-        <p class="lead">처음부터 다시 만들지 않습니다. 있던 흐름에 네 조각을 차례로 얹으면 오케스트레이션이 됩니다</p>
+        <div class="chapter">PART 2 · 오케스트레이션 ④ 단계별 기능 보완</div>
+        <h2>작업 흐름에 필요한 기능 보완하기</h2>
+        <p class="lead">실패 처리, 검증, 정보 전달, 병렬 실행 중 현재 업무에 필요한 기능부터 추가합니다.</p>
 
         <ol class="pipeline pipeline--course">
           <li class="pipeline-step">
@@ -2054,75 +2039,52 @@ description: 회의 녹취/메모를 표준 회의록으로 정리한다.
           </li>
           <li class="pipeline-step">
             <div class="step-label">4단계</div>
-            <div class="step-title">갈라치고 합치기</div>
+            <div class="step-title">병렬 실행과 결과 통합</div>
             <div class="step-sub">동시에 → 합쳐 검증</div>
           </li>
         </ol>
       </div>
 
       <aside class="handout">
-        <h3>오케스트레이션은 "새로 만들기"가 아니라 "얹기"</h3>
-        <p>
-          오케스트레이션이라고 하면 처음부터 거창하게 설계해야 할 것 같지만, 실제로는 <em>이미 있는 파이프라인에 한 조각씩 더하는 일</em>입니다.
-          더할 조각은 딱 네 가지뿐입니다. 아래에서 하나씩 보겠습니다.
-        </p>
+        <h3>기존 흐름을 유지하며 필요한 기능 추가하기</h3>
+        <p>기존 자동화를 모두 다시 만들 필요는 없습니다. 어느 단계에서 문제가 생기는지 확인한 뒤, 아래 네 가지 기능 중 필요한 것을 선택해 보완합니다.</p>
 
         <h3>먼저 점검: 내 자동화에 이 네 가지가 있나?</h3>
-        <p>내가 만든 자동화가 아직 파이프라인에 머물러 있는지, 오케스트레이션으로 올라섰는지 네 축으로 가늠할 수 있습니다.</p>
-        <div class="table-scroll" tabindex="0" role="region" aria-label="표: 가로로 스크롤할 수 있습니다"><table class="slide-table compact">
-          <thead>
-            <tr><th>축</th><th>파이프라인 (그냥 흐름)</th><th>오케스트레이션 (스스로 판단)</th></tr>
-          </thead>
-          <tbody>
-            <tr><td><strong>루프</strong></td><td>한 번 흐르고 끝</td><td>결과가 검증 실패 시 다시 처리</td></tr>
-            <tr><td><strong>평가</strong></td><td>나온 결과를 그냥 믿음</td><td>검토 게이트가 통과·재시도 판정</td></tr>
-            <tr><td><strong>기억</strong></td><td>갈수록 맥락이 불어나 흐려짐</td><td>정리해서 다음으로 인계</td></tr>
-            <tr><td><strong>구조</strong></td><td>한 줄로 직렬</td><td>갈라서 동시에 → 합쳐서 검증</td></tr>
-          </tbody>
-        </table></div>
+        <p>아래 항목은 자동화의 완성도를 점검하는 기준입니다. 네 가지 기능을 모두 갖춰야 하는 것은 아니며, 특정 기능의 유무만으로 파이프라인과 오케스트레이션을 구분하지 않습니다.</p>
+        <dl class="course-explanations"><dt><strong>루프</strong></dt><dd><strong>보완이 필요한 상태: </strong>실패 시 처리 절차 없음</dd><dd><strong>추가할 기능: </strong>결과가 검증 실패 시 다시 처리</dd><dt><strong>평가</strong></dt><dd><strong>보완이 필요한 상태: </strong>결과 확인 기준 없음</dd><dd><strong>추가할 기능: </strong>검토 게이트가 통과·재시도 판정</dd><dt><strong>기억</strong></dt><dd><strong>보완이 필요한 상태: </strong>다음 단계에 필요한 정보가 불분명</dd><dd><strong>추가할 기능: </strong>정리해서 다음으로 인계</dd><dt><strong>구조</strong></dt><dd><strong>보완이 필요한 상태: </strong>독립 작업도 순서대로 실행</dd><dd><strong>추가할 기능: </strong>갈라서 동시에 → 합쳐서 검증</dd></dl>
 
-        <h3>한 조각씩 올리는 사다리</h3>
+        <h3>필요에 따라 추가할 네 가지 기능</h3>
         <h4>➊ 되돌리는 루프</h4>
-        <p>"한 번 흐르고 끝"이던 자동화에 <strong>"결과가 기준에 안 맞으면 다시"</strong>를 넣습니다. AI에게 한마디면 됩니다. 예: <em>"결과가 ○○ 기준에 미달이면, 통과할 때까지 다시 해줘."</em></p>
+        <p>결과가 기준에 미달하면 실패 사유를 다음 실행에 전달합니다. 재시도 횟수와 중단 조건을 정해 같은 오류를 계속 반복하지 않도록 합니다.</p>
         <h4>➋ 검증 게이트</h4>
-        <p>만든 결과를 그대로 믿지 않고, <strong>검토 역할</strong>이 통과·재시도를 판정하게 합니다(바로 뒤의 에이전트 설계와 이어집니다). 예: <em>"검토 단계를 더해서, 통과할 때만 다음으로 보내줘."</em> 가장 흔하고 쉬운 첫걸음입니다.</p>
+        <p>생성과 검토 역할을 구분하고, 검토 결과에 따라 다음 단계 진행 여부를 결정합니다. 어떤 조건을 검사하며 무엇을 사람이 확인할지 먼저 정합니다.</p>
         <h4>➌ 기억 관리</h4>
-        <p>단계가 길어지면 맥락이 불어나 처음 기준이 흐려집니다. 그래서 중간중간 <strong>정리해서 다음으로 넘기는</strong> 기술이 필요합니다. 사람도 긴 회의 끝엔 핵심만 요약해 인계하듯, AI도 길어지면 정리해서 넘깁니다.</p>
-        <h4>➍ 갈라치고 합치기</h4>
-        <p>서로 무관한 일을 <strong>동시에 나눠 돌리고, 합칠 때 한 번 더 검증</strong>합니다. 시간이 크게 줄지만 합치는 순간 깨지기 쉬워, 합칠 때 반드시 통합 검증을 한 번 더 합니다.</p>
+        <p>다음 단계에는 목표, 적용 기준, 확인된 결과와 미해결 항목을 전달합니다. 작업 기록 전체를 반복 전달하기보다 필요한 정보를 정리하되 판단 근거는 남깁니다.</p>
+        <h4>➍ 병렬 실행과 결과 통합</h4>
+        <p>서로 의존하지 않는 작업은 동시에 실행할 수 있습니다. 결과를 합칠 때 형식과 내용이 서로 충돌하지 않는지 확인하고 전체 결과를 다시 검증합니다.</p>
 
-        <div class="callout">
-          <strong>핵심</strong> 처음부터 네 가지를 다 갖출 필요는 없습니다. <em>검토 역할 하나만 더해도</em> "파이프라인 → 오케스트레이션"의 첫 칸을 올린 것입니다. 내 자동화가 막히는 칸부터 한 조각씩 올리면 됩니다.
-        </div>
+        <div class="callout">현재 발생하는 오류와 처리 비용을 기준으로 보완할 기능을 선택합니다. 기능을 추가한 뒤에는 기존 입력에서도 결과가 유지되는지 확인합니다.</div>
       </aside>
     </section>
 
     
     <section class="unit" id="slide-10" data-step="10">
       <div class="slide-copy">
-        <div class="chapter">PART 2 · 오케스트레이션 ⑤ 막힐 때 키우는 법</div>
-        <h2>내 파이프라인이 이러면<br>이렇게 <em>키운다</em></h2>
-        <p class="lead">단순 파이프라인이 막히는 신호를 보고, 거기 맞는 방식으로 오케스트레이션으로 키우는 법</p>
+        <div class="chapter">PART 2 · 오케스트레이션 ⑤ 문제 유형별 개선 방법</div>
+        <h2>문제 유형에 맞는 작업 구성 선택하기</h2>
+        <p class="lead">누락, 입력 유형의 차이, 복잡한 작업, 독립 작업의 반복에 각각 맞는 처리 방식을 살펴봅니다.</p>
 
-        <div class="table-scroll" tabindex="0" role="region" aria-label="표: 가로로 스크롤할 수 있습니다"><table class="slide-table compact">
-          <thead><tr><th>내 파이프라인이 이러면</th><th>이렇게 키운다</th></tr></thead>
-          <tbody>
-            <tr><td>결과가 들쭉날쭉, 가끔 빠뜨림</td><td>검토하는 역할을 하나 더 둔다</td></tr>
-            <tr><td>들어오는 게 여러 종류라 한 흐름으론 안 됨</td><td>먼저 유형을 가르고 갈래마다 다르게</td></tr>
-            <tr><td>한 단계가 너무 커서 품질이 떨어짐</td><td>단계를 전문 역할로 쪼갠다</td></tr>
-            <tr><td>서로 무관한 일을 한 번에</td><td>동시에 돌리고 합친다</td></tr>
-          </tbody>
-        </table></div>
+        <dl class="course-explanations"><dt>결과가 들쭉날쭉, 가끔 빠뜨림</dt><dd>검토하는 역할을 하나 더 둔다</dd><dt>들어오는 게 여러 종류라 한 흐름으론 안 됨</dt><dd>먼저 유형을 가르고 갈래마다 다르게</dd><dt>한 단계가 너무 커서 품질이 떨어짐</dt><dd>단계를 전문 역할로 쪼갠다</dd><dt>서로 무관한 일을 한 번에</dt><dd>동시에 돌리고 합친다</dd></dl>
       </div>
 
       <aside class="handout">
-        <h3>5패턴? 결국 "내 자동화를 키우는 신호"입니다</h3>
-        <p>Anthropic이 정리한 다섯 가지 오케스트레이션 패턴<button type="button" class="modal-trigger" data-modal="m-patterns" aria-label="5가지 패턴과 영문 이름 설명">i</button>이 있습니다(이어달리기·분류·지휘관과 일꾼·채점과 재시도·동시 처리). 이름은 어렵지만, 중요한 건 하나입니다. <em>내 자동화가 어떤 신호를 보일 때 어떤 방식으로 키우나.</em> 신호별로, AI에게 어떻게 한마디 하면 되는지까지 정리합니다.</p>
+        <h3>문제 유형에 따른 작업 구성</h3>
+        <p>순차 처리, 분류, 작업 분배, 평가와 재시도, 병렬 처리의 다섯 가지 구성을 살펴봅니다. 이름보다 어떤 문제에 적용할 수 있는지 이해하는 것이 중요합니다. 아래 예시에서 자신의 업무에 필요한 구성을 선택합니다.</p>
 
         <h4>① 결과가 들쭉날쭉하고 가끔 빠뜨린다 → 검토 역할 추가</h4>
-        <p>만드는 역할과 별개로, 결과를 점검하는 역할을 하나 더 둡니다. 미달이면 다시 만들게 합니다. 사람이 일일이 안 봐도 품질이 일정해집니다. (채점과 재시도 패턴)</p>
+        <p>생성 역할과 별개로 결과를 점검하는 역할을 둡니다. 기준에 미달하면 실패 사유를 반영해 수정합니다. 검토 역할도 오류를 놓칠 수 있으므로 중요한 항목은 규칙 검사나 사람의 확인을 함께 사용합니다.</p>
         <div class="prompt">
-          <div class="prompt-label">AI에게 한마디</div>
+          <div class="prompt-label">실습 요청 예시</div>
           <pre class="prompt-body">회의록 정리에 검토 단계를 더해줘. 액션아이템이 빠지면
 다시 정리하게 하고, 통과할 때만 노션에 올려줘.</pre>
         </div>
@@ -2130,7 +2092,7 @@ description: 회의 녹취/메모를 표준 회의록으로 정리한다.
         <h4>② 들어오는 게 여러 종류다 → 먼저 분류</h4>
         <p>한 흐름으로 다 처리하려 하지 말고, 입력 유형을 먼저 가른 뒤 갈래마다 다르게 처리합니다. (분류 패턴)</p>
         <div class="prompt">
-          <div class="prompt-label">AI에게 한마디</div>
+          <div class="prompt-label">실습 요청 예시</div>
           <pre class="prompt-body">메일을 긴급·일반·스팸으로 먼저 분류한 다음,
 긴급만 슬랙으로 알리고 나머지는 노션에 정리해줘.</pre>
         </div>
@@ -2145,9 +2107,9 @@ description: 회의 녹취/메모를 표준 회의록으로 정리한다.
         </div>
 
         <h4>③ 한 단계가 너무 크다 → 전문 역할로 쪼개기</h4>
-        <p>큰 단계 하나를 전문 역할 여럿으로 나눕니다. 앞 결과를 다음이 이어받습니다. 계획이 복잡하면 지휘자가 일을 나눠 맡깁니다. (이어달리기 · 지휘관과 일꾼 패턴)</p>
+        <p>큰 단계 하나를 전문 역할 여럿으로 나눕니다. 앞 결과를 다음이 이어받습니다. 계획이 복잡하면 작업을 조율하는 에이전트가 일을 나눠 맡깁니다. (순차 처리 · 작업 분배와 실행 패턴)</p>
         <div class="prompt">
-          <div class="prompt-label">AI에게 한마디</div>
+          <div class="prompt-label">실습 요청 예시</div>
           <pre class="prompt-body">기획서를 자료 조사 → 초안 작성 → 다듬기
 세 역할로 나눠서, 순서대로 이어서 하게 해줘.</pre>
         </div>
@@ -2155,7 +2117,7 @@ description: 회의 녹취/메모를 표준 회의록으로 정리한다.
         <h4>④ 서로 무관한 일이 여럿이다 → 동시에</h4>
         <p>의존하지 않는 일은 동시에 돌리고 마지막에 합칩니다. 시간이 크게 줄어듭니다. (동시 처리 패턴)</p>
         <div class="prompt">
-          <div class="prompt-label">AI에게 한마디</div>
+          <div class="prompt-label">실습 요청 예시</div>
           <pre class="prompt-body">세 부서 데이터를 각각 따로 정리한 다음,
 하나의 보고서로 합쳐줘.</pre>
         </div>
@@ -2180,7 +2142,7 @@ description: 회의 녹취/메모를 표준 회의록으로 정리한다.
         <h4>판단이 들어가는 일의 "검증"은 따로 있습니다</h4>
         <p>"분배가 맞았나"는 정답표가 없어 기계가 채점하거나 재시도할 수 없습니다. 그래서 판단 업무의 검증은 <em>정답 대조</em>가 아니라 <strong>불확실성을 감지해 사람에게 넘기는 것</strong>입니다.</p>
         <div class="prompt">
-          <div class="prompt-label">AI에게 한마디</div>
+          <div class="prompt-label">실습 요청 예시</div>
           <pre class="prompt-body">규칙에 또렷이 맞으면 자동으로 분배하고,
 애매하거나 확신이 낮으면 분배하지 말고 나에게 넘겨줘.</pre>
         </div>
@@ -2199,7 +2161,7 @@ description: 회의 녹취/메모를 표준 회의록으로 정리한다.
     <section class="unit" id="slide-11" data-step="11">
       <div class="slide-copy">
         <div class="chapter">PART 2 · 오케스트레이션 ⑥ 에이전트 설계</div>
-        <h2>직무기술서로 설계하는<br><em>에이전트</em></h2>
+        <h2>직무기술서로 설계하는 <em>에이전트</em></h2>
         <p class="lead">역할을 적어 둔 파일 하나로 매번 일관된 결과를 내는 에이전트 설계</p>
 
         <div class="table-scroll" tabindex="0" role="region" aria-label="표: 가로로 스크롤할 수 있습니다"><table class="slide-table compare">
@@ -2224,7 +2186,7 @@ description: 회의 녹취/메모를 표준 회의록으로 정리한다.
 
         <h4>에이전트 페르소나: 다섯 가지 구성 요소</h4>
         <ul class="bullets">
-          <li><strong>① 역할</strong>: 담당 업무를 한 줄로. (지휘자가 누구에게 일을 보낼지 판단하는 근거가 됩니다.)</li>
+          <li><strong>① 역할</strong>: 담당 업무를 한 줄로. (작업을 조율하는 에이전트가 누구에게 일을 보낼지 판단하는 근거가 됩니다.)</li>
           <li><strong>② 모델</strong>: 난이도에 맞는 AI 모델 배분.</li>
           <li><strong>③ 시스템 프롬프트<button type="button" class="modal-trigger" data-modal="m-sysprompt" aria-label="시스템 프롬프트 설명">i</button></strong>: 기준, 순서, 금지사항. (모호하면 AI가 임의로 채웁니다.)</li>
           <li><strong>④ 출력 형식</strong>: 결과물의 구조. (다음 단계가 바로 받아쓸 수 있어야 합니다.)</li>
@@ -2304,8 +2266,8 @@ model: sonnet
     <section class="unit" id="slide-12" data-step="12">
       <div class="slide-copy">
         <div class="chapter">PART 2 · 오케스트레이션 ⑦ 합쳐보기</div>
-        <h2>세 패턴을 한 시스템에<br><em>엮기</em></h2>
-        <p class="lead">입력, 분류, 전문가들의 이어달리기, 검증으로 세 패턴을 조합한 실제 시스템</p>
+        <h2>세 패턴을 한 시스템에 <em>엮기</em></h2>
+        <p class="lead">입력, 분류, 역할별 순차 처리, 검증으로 세 패턴을 조합한 실제 시스템</p>
 
         <ol class="pipeline pipeline--course">
           <li class="pipeline-step">
@@ -2320,7 +2282,7 @@ model: sonnet
           </li>
           <li class="pipeline-step">
             <div class="step-label">파이프라인</div>
-            <div class="step-title">전문가 이어달리기</div>
+            <div class="step-title">역할별 순차 처리</div>
             <div class="step-sub">에이전트들이 순차 처리</div>
           </li>
           <li class="pipeline-step is-current">
@@ -2337,7 +2299,7 @@ model: sonnet
         <ol class="steps">
           <li><strong>입력</strong>: <code>이번 분기 영업 실적 보고서 만들어줘</code>라는 핵심 개념가 들어옵니다.</li>
           <li><strong>라우터<button type="button" class="modal-trigger" data-modal="m-router" aria-label="라우터 설명">i</button></strong>: 이 요청이 조사형인지 작성형인지 판단해 알맞은 흐름으로 보냅니다. <em>(Routing 패턴)</em></li>
-          <li><strong>이어달리기</strong>: 리서처(자료 수집), 작성자(초안), 검토자(report-reviewer) 순으로 결과를 넘깁니다. <em>(Prompt Chaining 패턴)</em></li>
+          <li><strong>순차 처리</strong>: 리서처(자료 수집), 작성자(초안), 검토자(report-reviewer) 순으로 결과를 넘깁니다. <em>(Prompt Chaining 패턴)</em></li>
           <li><strong>검증</strong>: 검토자가 보완 판정을 내리면, 그 피드백과 함께 작성자 단계로 되돌립니다. 통과할 때까지 반복합니다. <em>(Evaluator-Optimizer 패턴)</em></li>
         </ol>
 
@@ -2345,13 +2307,13 @@ model: sonnet
         <p>
           여러 에이전트가 서로 일을 넘기고 검증하는 구조는, 과거에는 직접 프로그램을 짜서 엮어야 했습니다.
           지금 Claude Code에서는 서브에이전트(<code>.claude/agents/</code>)만 정의해 두면,
-          메인 Claude가 지휘자 역할을 맡아 어느 일을 누구에게 맡길지, 검증은 누구에게 맡길지를 알아서 판단하고 위임합니다.
-          여기서 지휘자가 하는 일은 코드가 아니라, 누가 무엇을 받고 누가 검증하는지를 정해둔 역할 분배표를 따르는 것입니다.
+          메인 Claude가 작업을 조율하는 에이전트 역할을 맡아 어느 일을 누구에게 맡길지, 검증은 누구에게 맡길지를 알아서 판단하고 위임합니다.
+          여기서 작업을 조율하는 에이전트가 하는 일은 코드가 아니라, 누가 무엇을 받고 누가 검증하는지를 정해둔 역할 분배표를 따르는 것입니다.
           남는 일은 <em>각 역할의 직무기술서를 잘 써두는 것</em>뿐입니다.
         </p>
 
         <h4>이 시스템 안에서 동시에 도는 세 패턴</h4>
-        <div class="cards">
+        <div class="cards course-topics">
           <article>
             <span>ROUTING</span>
             <h3>흐름 선택</h3>
@@ -2388,14 +2350,14 @@ model: sonnet
     <section class="unit" id="slide-practice" data-step="실습">
       <div class="slide-copy">
         <div class="chapter">직접 해보기 · 들어가기</div>
-        <h2>파이프라인을 오케스트레이터로<br><em>직접 바꾸기</em></h2>
+        <h2>파이프라인을 오케스트레이터로 <em>직접 바꾸기</em></h2>
         <p class="lead">개념을 익혔으니, 내 자동화에 검토 게이트와 되돌리는 루프를 직접 추가하는 30분</p>
       </div>
 
       <aside class="handout">
         <h3>실습 목표</h3>
         <p>
-          여기까지가 개념이고, 지금부터는 직접 해봅니다. 앞 사다리에서 본 <em>검토 게이트(➋)</em>와 에이전트 설계에서 본 <em>검토자</em>를
+          여기까지가 개념이고, 지금부터는 직접 해봅니다. 앞에서 살펴본 <em>검토 게이트(➋)</em>와 에이전트 설계에서 본 <em>검토자</em>를
           내 자동화에 직접 추가해, 단순 파이프라인을 오케스트레이터로 바꿉니다. 검토 역할 하나만 더해도 오케스트레이션의 첫 단계입니다.
         </p>
 
@@ -2456,7 +2418,7 @@ model: sonnet
     <section class="unit" id="slide-practice-a" data-step="실습A">
       <div class="slide-copy">
         <div class="chapter">직접 해보기 · 트랙 A</div>
-        <h2>파이프라인을 만들고<br><em>검토 게이트 추가</em></h2>
+        <h2>파이프라인을 만들고 <em>검토 게이트 추가</em></h2>
         <p class="lead">슬래시 커맨드로 흐름을 만들고, 거기에 검토자와 되돌리는 루프까지 추가</p>
       </div>
 
@@ -2545,13 +2507,13 @@ model: sonnet
         </div>
 
         <h4> 4단계 · 되돌리는 루프 연결</h4>
-        <p>검토만으로는 아직 반쪽입니다. 보완 판정이 나오면 자동으로 다시 만들게 묶습니다.</p>
+        <p>검토 결과에 따른 후속 처리를 정합니다. 보완이 필요하면 실패 사유를 전달하고 정해진 횟수 안에서 다시 실행합니다.</p>
         <div class="prompt">
           <div class="prompt-label">실습 프롬프트</div>
           <pre class="prompt-body">앞으로 주간보고는 이렇게 해줘. 초안을 만들고 검토자에게 보내서,
 보완이면 그 지적을 반영해 다시 만들고, 통과일 때만 최종본을 내줘.</pre>
         </div>
-        <p>이 한 줄이 한 번 흐르고 끝이던 흐름에 <em>되돌아감</em>을 더합니다. 만들기와 검토가 통과까지 오가는 순간, 그것이 오케스트레이션입니다.</p>
+        <p>이 한 줄이 실패 시 처리 절차 없음이던 흐름에 <em>되돌아감</em>을 더합니다. 만들기와 검토가 통과까지 오가는 순간, 그것이 오케스트레이션입니다.</p>
 
         <h4>5단계 · 일부러 틀리게 해서 확인</h4>
         <p>한 칸을 비운 허술한 메모를 일부러 넣습니다. 검토자가 보완을 내고, 루프가 다시 도는지 봅니다. 다시 돌면 파이프라인이 오케스트레이터로 바뀐 것입니다.</p>
@@ -2566,7 +2528,7 @@ model: sonnet
     <section class="unit" id="slide-practice-b" data-step="실습B">
       <div class="slide-copy">
         <div class="chapter">직접 해보기 · 트랙 B</div>
-        <h2>기존 파이프라인<br><em>기능 확장</em></h2>
+        <h2>기존 파이프라인 <em>기능 확장</em></h2>
         <p class="lead">검토 게이트를 빠르게 더하고, 부족한 부분에 두 번째 오케스트레이션 기능까지</p>
       </div>
 
@@ -2630,10 +2592,10 @@ model: sonnet
     <section class="unit" id="slide-13" data-step="13">
       <div class="slide-copy">
         <div class="chapter">PART 2 · 실전 안전·편의</div>
-        <h2>안전한 사용과<br><em>편의 기능</em></h2>
+        <h2>안전한 사용과 <em>편의 기능</em></h2>
         <p class="lead">AI가 컴퓨터에서 할 수 있는 일을 직접 통제하는 안전장치와, 더 편하게 쓰는 기능들</p>
 
-        <div class="cards">
+        <div class="cards course-topics">
           <article>
             <span>01 작업 폴더 제한</span>
             <h3>범위를 가둔다</h3>
@@ -2711,10 +2673,10 @@ model: sonnet
     <section class="unit" id="slide-14" data-step="14">
       <div class="slide-copy">
         <div class="chapter">PART 3 · 심화 학습 ①</div>
-        <h2>Claude와 Claude Code의<br><em>진화</em></h2>
+        <h2>Claude와 Claude Code의 <em>진화</em></h2>
         <p class="lead">개념은 그대로지만 1년 새 크게 달라진 실행 도구, 그 핵심</p>
 
-        <div class="cards">
+        <div class="cards course-topics">
           <article>
             <span>모델</span>
             <h3>더 똑똑하고 빠르게</h3>
@@ -2801,7 +2763,7 @@ model: sonnet
     <section class="unit" id="slide-15" data-step="15">
       <div class="slide-copy">
         <div class="chapter">PART 3 · 심화 학습 ②</div>
-        <h2>표면은 여럿, 기반은<br><em>터미널</em></h2>
+        <h2>표면은 여럿, 기반은 <em>터미널</em></h2>
         <p class="lead">터미널·데스크톱 앱·웹·IDE가 모두 같은 엔진, 그 공통 기반인 터미널을 먼저 익히는 이유</p>
 
         <div class="table-scroll" tabindex="0" role="region" aria-label="표: 가로로 스크롤할 수 있습니다"><table class="slide-table compact">
@@ -2888,7 +2850,7 @@ model: sonnet
     <section class="unit" id="slide-16" data-step="16">
       <div class="slide-copy">
         <div class="chapter">PART 3 · 심화 학습 ③</div>
-        <h2>실무 적용과<br><em>앞으로의 방향</em></h2>
+        <h2>실무 적용과 <em>앞으로의 방향</em></h2>
         <p class="lead">쏟아지는 새 기능보다, 내 업무에 어떻게 붙이느냐가 가르는 성패</p>
 
         <ol class="pipeline pipeline--core">
@@ -2949,7 +2911,7 @@ model: sonnet
     <section class="unit" id="slide-ultracode" data-step="ultra">
       <div class="slide-copy">
         <div class="chapter">PART 3 · 심화 학습 ④</div>
-        <h2>자율 실행<br><em>작업 분해부터 결과 검증까지</em></h2>
+        <h2>자율 실행 <em>작업 분해부터 결과 검증까지</em></h2>
         <p class="lead">단계를 손으로 짜던 일을, 도구가 스스로 판단해 펼치고 합치는 모드</p>
 
         <div class="table-scroll" tabindex="0" role="region" aria-label="표: 가로로 스크롤할 수 있습니다"><table class="slide-table compare">
@@ -2979,12 +2941,12 @@ model: sonnet
     <section class="unit" id="slide-17" data-step="17">
       <div class="slide-copy">
         <div class="chapter">마무리 · 다음 주까지</div>
-        <h2>오늘의<br><em>정리</em></h2>
+        <h2>오늘의 <em>정리</em></h2>
         <p class="lead">완성이 아니라, 한 번 끝까지 시도해 막히는 지점을 찾아내기</p>
 
         <ul class="homework">
           <li><strong>① 고르기</strong>: 오늘의 도전 과제 중 마음에 드는 하나 (슬래시 만들기 · 검토 역할 추가 · 스킬 만들기 등)</li>
-          <li><strong>② 시키기</strong>: AI에게 한마디로 시켜 내 자동화에 한 번 얹어보기</li>
+          <li><strong>② 적용하기</strong>: 필요한 기능을 요청하고 실행 결과를 확인합니다.</li>
           <li><strong>③ 기록</strong>: 잘 된 점, 막힌 점을 짧게 메모</li>
           <li><strong>④ 회신</strong>: 한 단락으로 정리해 진행자 메일로 보내기</li>
         </ul>
@@ -2992,7 +2954,7 @@ model: sonnet
 
       <aside class="handout">
         <h3>오늘의 핵심</h3>
-        <div class="cards">
+        <div class="cards course-topics">
           <article><span>01</span><h3>파이프라인</h3><p>MCP + 슬래시 + 스케줄로 처음부터 끝까지 자동</p></article>
           <article><span>02</span><h3>Skills</h3><p>AI가 알아서 꺼내 쓰는 노하우 묶음</p></article>
           <article><span>03</span><h3>에이전트</h3><p>스스로 판단하고 다음 행동을 정하는 AI</p></article>
@@ -3019,17 +2981,17 @@ model: sonnet
         </ul>
 
         <h3>과제 안내, 자세히</h3>
-        <p>이번 과제의 핵심은 직접 다 만드는 것이 아니라, 오늘 배운 것 하나를 내 업무에 가볍게 얹어보는 것입니다.</p>
+        <p>이번 과제의 핵심은 직접 다 만드는 것이 아니라, 오늘 배운 것 하나를 자신의 업무에 적용하고 결과를 확인하는 것입니다.</p>
         <ol class="steps">
           <li>오늘의 도전 과제(도구 연결 · 슬래시 만들기 · 스케줄 예약 · 스킬 만들기 · 검토 역할 추가) 중 <strong>하나</strong>를 고릅니다.</li>
-          <li>그것을 AI에게 한마디로 시킵니다. 예: <code>내 주간보고를 /주간보고로 만들어줘</code>.</li>
+          <li>선택한 기능을 구체적으로 요청합니다. 예: <code>내 주간보고를 /주간보고로 만들어줘</code>.</li>
           <li>나온 결과를 확인하고, 어긋나면 "이 부분 고쳐줘"라고 다시 시킵니다. 완성하려 애쓰지 않아도 됩니다.</li>
           <li>잘 된 점과 막힌 점을 3~5줄로 메모합니다.</li>
           <li>한 단락으로 정리해 진행자 메일로 회신합니다. (무엇을 시켰는지, 어디서 막혔는지)</li>
         </ol>
 
-        <h3>다음 주까지: 오케스트레이션 한 걸음 얹어보기</h3>
-        <p>여유가 있다면, 이번 주에 고른 자동화 하나에 오케스트레이션을 가볍게 얹어 보세요. 가장 쉬운 길은 <strong>검토 역할 하나를 추가</strong>하는 것입니다. 완성이 목표가 아니라, 역할을 나눈다는 감각만 잡으면 됩니다.</p>
+        <h3>다음 주까지: 역할 분담과 검토 단계 적용하기</h3>
+        <p>선택한 자동화에 <strong>검토 역할을 추가</strong>해 보세요. 생성 역할과 검토 역할에 각각 어떤 정보를 전달할지 정하고, 검토 결과가 다음 실행에 반영되는지 확인합니다.</p>
         <ol class="steps">
           <li><strong>만드는 역할과 검토 역할을 나눕니다.</strong> AI에게 "내 ~ 작업에 검토 단계를 더해줘. 기준에 미달이면 다시 만들고, 통과할 때만 다음으로 보내줘"라고 한마디 합니다.</li>
           <li><strong>검증 기준을 셀 수 있게 적습니다.</strong> "좋은가"가 아니라 "핵심 수치 3개 이상", "액션아이템에 담당자·기한 포함"처럼 숫자나 조건으로 적어야 통과·재시도가 사람 없이 자동으로 돕니다.</li>
@@ -3198,7 +3160,7 @@ model: sonnet
       <button type="button" class="modal-close" aria-label="닫기">✕</button>
       <div class="modal-header"><h3 class="modal-title">서브에이전트</h3></div>
       <div class="modal-body">
-        <p><strong>독립된 기억(맥락)과 역할</strong>을 가진 전문 AI 동료입니다. 메인 Claude가 지휘자가 되어, 특정 일(검토·조사 등)을 통째로 위임합니다. <code>.claude/agents/</code> 폴더의 파일 하나로 정의합니다.</p>
+        <p><strong>독립된 기억(맥락)과 역할</strong>을 가진 전문 AI 동료입니다. 메인 Claude가 작업을 조율하는 에이전트가 되어, 특정 일(검토·조사 등)을 통째로 위임합니다. <code>.claude/agents/</code> 폴더의 파일 하나로 정의합니다.</p>
         <div class="modal-section">
           <div class="modal-section-title">왜 나누나</div>
           <p>한 AI가 다 하면 기억이 흐려지고 관점이 섞입니다. 역할을 나누면 각자 자기 전문성에만 집중해, 품질이 일정해지고 검증도 객관적이 됩니다.</p>
@@ -3252,9 +3214,9 @@ model: sonnet
       <div class="modal-body">
         <p>Anthropic이 정리한 다섯 가지 협업 구조입니다. <strong>이름은 외울 필요 없습니다.</strong> 내 자동화가 어디서 막히는지만 보면 됩니다.</p>
         <ul>
-          <li><strong>Prompt Chaining</strong> (이어달리기): 앞 결과를 다음이 이어받음</li>
+          <li><strong>Prompt Chaining</strong> (순차 처리): 앞 결과를 다음이 이어받음</li>
           <li><strong>Routing</strong> (분류): 유형을 먼저 가른 뒤 갈래마다 다르게</li>
-          <li><strong>Orchestrator-Workers</strong> (지휘관과 일꾼): 지휘자가 일을 나눠 맡김</li>
+          <li><strong>Orchestrator-Workers</strong> (작업 분배와 실행): 작업을 조율하는 에이전트가 일을 나눠 맡김</li>
           <li><strong>Evaluator-Optimizer</strong> (채점과 재시도): 한쪽이 만들고 다른 쪽이 평가·반복</li>
           <li><strong>Parallelization</strong> (동시 처리): 무관한 일을 동시에 돌려 마지막에 합침</li>
         </ul>
@@ -3444,4 +3406,5 @@ if('IntersectionObserver' in window){const observer=new IntersectionObserver(ent
 </script><!-- workshop-default-controls -->
 <button id="themeToggle" class="theme-toggle" type="button" aria-label="어두운 화면으로 전환" title="어두운 화면으로 전환"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 15A9 9 0 0 1 9 4a9 9 0 1 0 11 11Z"></path></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l2 2m10 10 2 2M5 19l2-2M17 7l2-2"></path></svg></button>
 <button id="tocToggle" class="toc-toggle" type="button" aria-label="목차 열기" aria-expanded="false" aria-controls="sidebar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"></path></svg></button><div class="toc-backdrop"></div>
-<!-- /workshop-default-controls --><script src="./theme.js"></script></body></html>
+<!-- /workshop-default-controls --><script src="./theme.js"></script>
+</body></html>

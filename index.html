@@ -1221,7 +1221,7 @@ body[data-mode="doc"] .lead { max-width: 100%; }
     body[data-mode="slides"] .slide-nav { display: none !important; }
   </style>
 <style>.course-nav{display:flex;gap:16px;white-space:nowrap}.course-nav a{font-size:14px;color:inherit;text-decoration:none}.course-nav a[aria-current]{font-weight:700;text-decoration:underline;text-underline-offset:5px}.topbar{gap:12px}@media(max-width:720px){.topbar{height:auto;min-height:56px;flex-wrap:wrap;padding:10px 16px}.brand-week,.brand-sep{display:none}.course-nav{margin-left:auto}}</style><style>@media(max-width:720px){.cards.four{grid-template-columns:repeat(2,minmax(0,1fr))}.cards article{min-width:0;overflow-wrap:anywhere}}</style><link rel="stylesheet" href="./theme.css"><link rel="stylesheet" href="./workshop.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans+KR:wght@500;600;700&amp;display=swap"></head>
-<body data-mode="doc" data-editorial="20261002">
+<body data-mode="doc" data-editorial="20261002" data-course-refinement="20261002">
 
   <header class="topbar">
     <div class="brand">
@@ -1328,7 +1328,7 @@ body[data-mode="doc"] .lead { max-width: 100%; }
     <section class="unit" id="slide-producer" data-step="02">
       <div class="slide-copy">
         <div class="chapter">PART 0 · 왜 이 과정인가</div>
-        <h2>AI 도구의 소비자가 아니라<br><em>생산자가 되는 것</em></h2>
+        <h2>AI 도구의 소비자가 아니라 <em>생산자가 되는 것</em></h2>
         <p class="lead">남이 만든 도구에 내 업무를 맞추는 대신 내가 원하는 도구를 직접 만들어 쓰는 사람으로</p>
 
         <div class="table-scroll" tabindex="0" role="region" aria-label="표: 가로로 스크롤할 수 있습니다"><table class="slide-table compare">
@@ -1386,10 +1386,10 @@ body[data-mode="doc"] .lead { max-width: 100%; }
     <section class="unit" id="slide-how" data-step="03">
       <div class="slide-copy">
         <div class="chapter">PART 0 · 진행 방식</div>
-        <h2>막히는 게 정상이고<br><em>막힌 지점이 재료다</em></h2>
+        <h2>막히는 게 정상이고 <em>막힌 지점이 재료다</em></h2>
         <p class="lead">실행 결과를 확인하고, 오류의 원인과 해결 과정을 기록합니다.</p>
 
-        <div class="cards">
+        <div class="cards course-topics">
           <article><span>STEP 01</span><h3>AI에게 먼저</h3><p>수준에 맞게 단계별로 설명해 달라고 요청한다</p></article>
           <article><span>STEP 02</span><h3>질문을 다르게</h3><p>맥락·제약·예시를 더해 다시 요청한다</p></article>
           <article><span>STEP 03</span><h3>문제 상황 공유</h3><p>그래도 안 풀리면 함께 푼다</p></article>
@@ -1429,10 +1429,10 @@ body[data-mode="doc"] .lead { max-width: 100%; }
     <section class="unit" id="slide-tools" data-step="04">
       <div class="slide-copy">
         <div class="chapter">PART 1 · 실습 환경 ①</div>
-        <h2>자연어로 다루는<br><em>세 가지 도구</em></h2>
+        <h2>자연어로 다루는 <em>세 가지 도구</em></h2>
         <p class="lead">개발자든 아니든 자연어로 AI를 오케스트레이션하는 데 필요한 도구는 세 가지입니다</p>
 
-        <div class="cards">
+        <div class="cards course-topics">
           <article><span>MAKE</span><h3>Claude 웹</h3><p>claude.ai 채팅. 후보 평가·명세 다듬기를 대화로</p></article>
           <article><span>BUILD</span><h3>Claude Code</h3><p>노트북 터미널. 실제 자동화를 만드는 주력 도구</p></article>
           <article><span>KEEP</span><h3>로컬 git</h3><p>hipo-2 폴더를 버전 관리해 되돌리고 나눈다</p></article>
@@ -1470,7 +1470,7 @@ body[data-mode="doc"] .lead { max-width: 100%; }
     <section class="unit" id="slide-install" data-step="05">
       <div class="slide-copy">
         <div class="chapter">PART 1 · 실습 환경 ②</div>
-        <h2>설치도<br><em>한 줄 프롬프트로</em></h2>
+        <h2>설치도 <em>한 줄 프롬프트로</em></h2>
         <p class="lead">명령어를 외우지 않습니다. claude.ai에 한 번 붙여 넣으면 단계별로 안내합니다</p>
       </div>
 
@@ -1523,10 +1523,10 @@ git으로 초기화하려고 해. 처음부터 끝까지 단계별로 안내해�
     <section class="unit" id="slide-criteria" data-step="06">
       <div class="slide-copy">
         <div class="chapter">PART 2 · 후보 고르기 ①</div>
-        <h2>자동화하기 좋은 업무의<br><em>다섯 가지 특성</em></h2>
+        <h2>자동화하기 좋은 업무의 <em>다섯 가지 특성</em></h2>
         <p class="lead">아무 일이나 자동화가 잘 되는 것은 아닙니다. 첫 대상은 다음 다섯 특성에 가까울수록 좋습니다</p>
 
-        <div class="cards">
+        <div class="cards course-topics">
           <article><span>01</span><h3>반복된다</h3><p>매주·매일 같은 주기로 돌아오는 일</p></article>
           <article><span>02</span><h3>규칙이 명확하다</h3><p>이런 상황이면 이렇게 한다가 정해진 일</p></article>
           <article><span>03</span><h3>입출력이 분명하다</h3><p>무엇이 들어와 무엇이 나가는지 또렷한 일</p></article>
@@ -1576,7 +1576,7 @@ git으로 초기화하려고 해. 처음부터 끝까지 단계별로 안내해�
     <section class="unit" id="slide-criteria-detail" data-step="07">
       <div class="slide-copy">
         <div class="chapter">PART 2 · 후보 고르기 ②</div>
-        <h2>다섯 특성을<br><em>좋은 예와 나쁜 예로</em></h2>
+        <h2>다섯 특성을 <em>좋은 예와 나쁜 예로</em></h2>
         <p class="lead">말로는 알쏭달쏭한 기준도 좋은 후보와 피해야 할 후보를 나란히 보면 또렷해집니다</p>
 
         <div class="table-scroll" tabindex="0" role="region" aria-label="표: 가로로 스크롤할 수 있습니다"><table class="slide-table compact">
@@ -1620,7 +1620,7 @@ git으로 초기화하려고 해. 처음부터 끝까지 단계별로 안내해�
     <section class="unit" id="slide-avoid" data-step="08">
       <div class="slide-copy">
         <div class="chapter">PART 2 · 후보 고르기 ③</div>
-        <h2>반대로 첫 대상으로<br><em>피해야 할 업무</em></h2>
+        <h2>반대로 첫 대상으로 <em>피해야 할 업무</em></h2>
         <p class="lead">못 한다는 뜻이 아니라 첫 자동화로는 무겁다는 뜻입니다</p>
 
         <div class="table-scroll" tabindex="0" role="region" aria-label="표: 가로로 스크롤할 수 있습니다"><table class="slide-table compact">
@@ -1657,10 +1657,10 @@ git으로 초기화하려고 해. 처음부터 끝까지 단계별로 안내해�
     <section class="unit" id="slide-rulebook" data-step="09">
       <div class="slide-copy">
         <div class="chapter">PART 3 · 대상 정하기 ①</div>
-        <h2>후보를 정리하고<br><em>피드백으로 다듬기</em></h2>
+        <h2>후보를 정리하고 <em>피드백으로 다듬기</em></h2>
         <p class="lead">머릿속 후보를 네 항목으로 적고 세 관점으로 서로 점검합니다</p>
 
-        <div class="cards">
+        <div class="cards course-topics">
           <article><span>01 무엇</span><h3>어떤 업무인지</h3><p>한두 문장으로</p></article>
           <article><span>02 왜</span><h3>좋은 특성 중 어디</h3><p>다섯 중 해당 항목</p></article>
           <article><span>03 입출력</span><h3>들어오고 나가는 것</h3><p>무엇이 들어와 무엇이 나가나</p></article>
@@ -1712,29 +1712,19 @@ git으로 초기화하려고 해. 처음부터 끝까지 단계별로 안내해�
     <section class="unit" id="slide-spec" data-step="10">
       <div class="slide-copy">
         <div class="chapter">PART 3 · 대상 정하기 ②</div>
-        <h2>명세의 최소 구조<br><em>입력 · 단계 · 출력 · 검증</em></h2>
-        <p class="lead">자동화를 설명하는 네 칸입니다. 검증이 빠지면 반쪽짜리 자동화가 됩니다</p>
+        <h2>명세의 최소 구조 <em>입력 · 단계 · 출력 · 검증</em></h2>
+        <p class="lead">자동화를 설명하는 네 칸입니다. 결과 확인 기준도 함께 정합니다</p>
 
-        <div class="cards">
-          <article><span>01</span><h3>입력</h3><p>시작을 유발하는 재료·트리거</p></article>
-          <article><span>02</span><h3>단계</h3><p>처리 순서와 분기 조건</p></article>
-          <article><span>03</span><h3>출력</h3><p>결과물의 형식과 저장 위치</p></article>
-          <article><span>04</span><h3>검증</h3><p>성공·실패를 판별하는 기준</p></article>
-        </div>
+        <figure class="learning-diagram" id="diagram-spec"><figcaption>자동화 명세: 입력부터 완료 기준까지</figcaption><div class="diagram-layout"><svg class="course-flow" viewBox="0 0 344 344" role="img" aria-labelledby="course-arrow-1-0-title"><title id="course-arrow-1-0-title">자동화 명세: 입력부터 완료 기준까지</title><defs><marker id="course-arrow-1-0" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10Z"></path></marker></defs><rect x="92" y="16" width="160" height="48" rx="5"></rect><text x="172" y="45" text-anchor="middle">입력</text><path d="M172 64 V94" marker-end="url(#course-arrow-1-0)"></path><rect x="92" y="102" width="160" height="48" rx="5"></rect><text x="172" y="131" text-anchor="middle">처리 단계</text><path d="M172 150 V180" marker-end="url(#course-arrow-1-0)"></path><rect x="92" y="188" width="160" height="48" rx="5"></rect><text x="172" y="217" text-anchor="middle">출력</text><path d="M172 236 V266" marker-end="url(#course-arrow-1-0)"></path><rect x="92" y="274" width="160" height="48" rx="5"></rect><text x="172" y="303" text-anchor="middle">검증</text></svg><dl class="diagram-details"><dt>입력</dt><dd>파일 형식과 필요한 항목을 정합니다.</dd><dt>처리 단계</dt><dd>분류·요약·변환할 순서를 정합니다.</dd><dt>출력</dt><dd>저장할 형식과 위치를 정합니다.</dd><dt>검증</dt><dd>누락·형식·내용의 합격 기준을 정합니다.</dd></dl></div><p class="diagram-note">검증 기준은 실행 전에 정합니다. 결과를 확인한 뒤 필요한 항목을 보완합니다.</p></figure>
       </div>
 
-      <aside class="handout">
+      <aside class="handout"><dl class="course-explanations"><dt>입력</dt><dd>시작을 유발하는 재료·트리거</dd><dt>단계</dt><dd>처리 순서와 분기 조건</dd><dt>출력</dt><dd>결과물의 형식과 저장 위치</dd><dt>검증</dt><dd>성공·실패를 판별하는 기준</dd></dl>
         <h3>명세<button type="button" class="modal-trigger" data-modal="m-spec" aria-label="명세 네 구조 설명">i</button>란 자동화를 설명하는 네 칸입니다</h3>
         <p>
           명세는 거창한 문서가 아닙니다. 자동화 하나를 <strong>입력·단계·출력·검증</strong> 네 칸으로 적은 것입니다. 이 네 칸이 채워지면 Claude Code가 무엇을 만들어야 하는지 알게 됩니다.
           오늘 적는 한 줄짜리 명세가 2주차에 파이프라인으로 펼쳐지고 3주차에 검증 장치로 이어집니다.
         </p>
-        <div class="table-scroll" tabindex="0" role="region" aria-label="표: 가로로 스크롤할 수 있습니다"><table class="example-table">
-          <tbody><tr><th>① 입력</th><td>시작을 유발하는 재료와 트리거<button type="button" class="modal-trigger" data-modal="m-trigger" aria-label="트리거 설명">i</button>. 무엇이 들어오면 자동화가 시작되는가.</td></tr>
-          <tr><th>② 단계</th><td>처리 순서와 분기 조건. 입력을 받아 출력까지 가는 과정을 차례로.</td></tr>
-          <tr><th>③ 출력</th><td>결과물의 형식과 저장 위치. 무엇이 어디에 어떤 모양으로 남는가.</td></tr>
-          <tr><th>④ 검증</th><td>성공과 실패를 판별하는 기준. 결과가 맞는지 어떻게 아는가.</td></tr>
-        </tbody></table></div>
+        <dl class="course-explanations"><dt>① 입력</dt><dd>시작을 유발하는 재료와 트리거<button type="button" class="modal-trigger" data-modal="m-trigger" aria-label="트리거 설명">i</button>. 무엇이 들어오면 자동화가 시작되는가.</dd><dt>② 단계</dt><dd>처리 순서와 분기 조건. 입력을 받아 출력까지 가는 과정을 차례로.</dd><dt>③ 출력</dt><dd>결과물의 형식과 저장 위치. 무엇이 어디에 어떤 모양으로 남는가.</dd><dt>④ 검증</dt><dd>성공과 실패를 판별하는 기준. 결과가 맞는지 어떻게 아는가.</dd></dl>
 
         <h4>주간보고 명세 예시 (그대로 적어 보기)</h4>
         <div class="prompt">
@@ -1770,13 +1760,13 @@ git으로 초기화하려고 해. 처음부터 끝까지 단계별로 안내해�
         <div class="callout">
           <strong> 직접 해보기</strong> 내 후보 업무를 위 네 칸에 한 줄씩 적어 봅니다. 검증 칸까지 채웁니다. 네 칸이 다 차면 다음 꼭지에서 AI에게 평가받고 그 다음 꼭지에서 Claude Code로 한 번 돌립니다.
         </div>
-      <figure class="learning-diagram" id="diagram-spec"><figcaption>자동화 명세: 입력부터 완료 기준까지</figcaption><ol class="diagram-steps"><li><strong>입력</strong><span>파일 형식과 필요한 항목을 정합니다.</span></li><li><strong>처리 단계</strong><span>분류·요약·변환할 순서를 정합니다.</span></li><li><strong>출력</strong><span>저장할 형식과 위치를 정합니다.</span></li><li><strong>검증</strong><span>누락·형식·내용의 합격 기준을 정합니다.</span></li></ol><p class="diagram-note">검증 기준은 실행 전에 정합니다. 결과를 확인한 뒤 필요한 항목을 보완합니다.</p></figure></aside>
+      </aside>
     </section>
 
     <section class="unit" id="slide-evaluate" data-step="11">
       <div class="slide-copy">
         <div class="chapter">PART 3 · 대상 정하기 ③</div>
-        <h2>고른 대상을<br><em>AI에게 평가받기</em></h2>
+        <h2>고른 대상을 <em>AI에게 평가받기</em></h2>
         <p class="lead">다섯 특성으로 점수를 매겨 보고 가장 약한 칸을 어떻게 보강할지 받습니다</p>
       </div>
 
@@ -1816,7 +1806,7 @@ git으로 초기화하려고 해. 처음부터 끝까지 단계별로 안내해�
     <section class="unit" id="slide-pipeline" data-step="12">
       <div class="slide-copy">
         <div class="chapter">PART 4 · 첫 워크플로우 ①</div>
-        <h2>내가 도구로 가던 것이<br><em>도구가 AI에게 온다</em></h2>
+        <h2>내가 도구로 가던 것이 <em>도구가 AI에게 온다</em></h2>
         <p class="lead">여러 도구를 오가며 직접 하던 일을 AI가 한 흐름으로 잇습니다. 이것이 파이프라인입니다</p>
 
         <div class="table-scroll" tabindex="0" role="region" aria-label="표: 가로로 스크롤할 수 있습니다"><table class="slide-table compare">
@@ -1864,7 +1854,7 @@ git으로 초기화하려고 해. 처음부터 끝까지 단계별로 안내해�
     <section class="unit" id="slide-example" data-step="13">
       <div class="slide-copy">
         <div class="chapter">PART 4 · 첫 워크플로우 ②</div>
-        <h2>명세가 흐름이 되는<br><em>한 장면</em></h2>
+        <h2>명세가 흐름이 되는 <em>한 장면</em></h2>
         <p class="lead">입력·단계·출력 세 칸이 그대로 가져오기·처리·정리 세 단계가 됩니다</p>
 
         <ol class="pipeline pipeline--core">
@@ -1912,13 +1902,13 @@ git으로 초기화하려고 해. 처음부터 끝까지 단계별로 안내해�
         <div class="callout">
           <strong>연결</strong> 여기서 검증 칸을 더하면 2주차의 검증 게이트가 됩니다. 오늘은 입력·단계·출력이 한 번 흐르는 것까지 보면 충분합니다.
         </div>
-      <figure class="learning-diagram" id="diagram-report"><figcaption>주간보고 자동화의 처리 흐름</figcaption><ol class="diagram-steps"><li><strong>업무 메모</strong><span>이번 주 기록을 입력합니다.</span></li><li><strong>분류·요약</strong><span>한 일, 계획, 이슈로 정리합니다.</span></li><li><strong>결과 확인</strong><span>필수 항목과 수치의 근거를 확인합니다.</span></li><li><strong>저장·공유</strong><span>확인한 보고서를 지정 위치에 저장합니다.</span></li></ol><p class="diagram-note">누락이나 근거 없는 내용이 있으면 저장·공유 전에 입력과 생성 결과를 다시 확인합니다.</p></figure></aside>
+      <figure class="learning-diagram" id="diagram-report"><figcaption>주간보고 자동화의 처리 흐름</figcaption><div class="diagram-layout"><svg class="course-flow" viewBox="0 0 344 344" role="img" aria-labelledby="course-arrow-1-1-title"><title id="course-arrow-1-1-title">주간보고 자동화의 처리 흐름</title><defs><marker id="course-arrow-1-1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10Z"></path></marker></defs><rect x="92" y="16" width="160" height="48" rx="5"></rect><text x="172" y="45" text-anchor="middle">업무 메모</text><path d="M172 64 V94" marker-end="url(#course-arrow-1-1)"></path><rect x="92" y="102" width="160" height="48" rx="5"></rect><text x="172" y="131" text-anchor="middle">분류·요약</text><path d="M172 150 V180" marker-end="url(#course-arrow-1-1)"></path><rect x="92" y="188" width="160" height="48" rx="5"></rect><text x="172" y="217" text-anchor="middle">결과 확인</text><path d="M172 236 V266" marker-end="url(#course-arrow-1-1)"></path><rect x="92" y="274" width="160" height="48" rx="5"></rect><text x="172" y="303" text-anchor="middle">저장·공유</text></svg><dl class="diagram-details"><dt>업무 메모</dt><dd>이번 주 기록을 입력합니다.</dd><dt>분류·요약</dt><dd>한 일, 계획, 이슈로 정리합니다.</dd><dt>결과 확인</dt><dd>필수 항목과 수치의 근거를 확인합니다.</dd><dt>저장·공유</dt><dd>확인한 보고서를 지정 위치에 저장합니다.</dd></dl></div><p class="diagram-note">누락이나 근거 없는 내용이 있으면 저장·공유 전에 입력과 생성 결과를 다시 확인합니다.</p></figure></aside>
     </section>
 
     <section class="unit" id="slide-firstrun" data-step="14">
       <div class="slide-copy">
         <div class="chapter">PART 4 · 첫 워크플로우 ③</div>
-        <h2>명세를<br><em>Claude Code에 건네기</em></h2>
+        <h2>명세를 <em>Claude Code에 건네기</em></h2>
         <p class="lead">네 칸으로 적은 명세를 그대로 Claude Code에 주고 처음부터 끝까지 한 번 같이 만듭니다</p>
       </div>
 
@@ -1962,10 +1952,10 @@ git으로 초기화하려고 해. 처음부터 끝까지 단계별로 안내해�
     <section class="unit" id="slide-safety" data-step="15">
       <div class="slide-copy">
         <div class="chapter">PART 4 · 첫 워크플로우 ④</div>
-        <h2>편하게 쓰되<br><em>권한은 조심스럽게</em></h2>
+        <h2>편하게 쓰되 <em>권한은 조심스럽게</em></h2>
         <p class="lead">자동화는 내 파일을 직접 다룹니다. 그래서 범위를 좁히고 자리에 있을 때 실행합니다</p>
 
-        <div class="cards">
+        <div class="cards course-topics">
           <article><span>범위</span><h3>작업 폴더 제한</h3><p>hipo-2 밖은 건드리지 않게 명시</p></article>
           <article><span>관찰</span><h3>자리에 있을 때</h3><p>실행 과정을 직접 보며 진행</p></article>
           <article><span>권한</span><h3>스킵 신중히</h3><p>권한 건너뛰는 명령은 함부로 쓰지 않음</p></article>
@@ -2003,7 +1993,7 @@ git으로 초기화하려고 해. 처음부터 끝까지 단계별로 안내해�
     <section class="unit" id="slide-wrap" data-step="16">
       <div class="slide-copy">
         <div class="chapter">마무리 · 다음 주까지</div>
-        <h2>오늘의<br><em>정리</em></h2>
+        <h2>오늘의 <em>정리</em></h2>
         <p class="lead">완성이 아니라 내 명세대로 첫 자동화가 한 번 도는 장면을 봅니다</p>
 
         <ul class="homework">
@@ -2016,7 +2006,7 @@ git으로 초기화하려고 해. 처음부터 끝까지 단계별로 안내해�
 
       <aside class="handout">
         <h3>오늘의 핵심</h3>
-        <div class="cards">
+        <div class="cards course-topics">
           <article><span>01</span><h3>소비자 → 생산자</h3><p>도구에 맞추는 대신 도구를 만든다</p></article>
           <article><span>02</span><h3>잘 고르기</h3><p>반복·규칙·입출력·처리·작게의 다섯 특성</p></article>
           <article><span>03</span><h3>명세 네 칸</h3><p>입력 · 단계 · 출력 · 검증</p></article>
