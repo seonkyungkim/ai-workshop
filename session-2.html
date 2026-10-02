@@ -1566,7 +1566,7 @@ body[data-mode="doc"] .lead { max-width: 100%; }
         <p>
           매번 길게 쓰던 지시문을 한 단어 명령으로 저장해 두는 기능입니다.
           위처럼 <code>.claude/commands/</code><button type="button" class="modal-trigger" data-modal="m-claude-dir" aria-label=".claude 폴더 설명">i</button> 폴더 안에 <code>회의록정리.md</code><button type="button" class="modal-trigger" data-modal="m-markdown" aria-label="마크다운 파일 설명">i</button> 파일을 만들어 두면,
-          다음부터는 그 긴 설명을 다시 쓸 필요 없이 <code>/회의록정리</code> 핵심 개념면 됩니다.
+          다음부터는 그 긴 설명을 다시 쓸 필요 없이 <code>/회의록정리</code> 한 줄이면 됩니다.
           파일 이름이 곧 명령어가 됩니다.
         </p>
         <p>
@@ -1652,8 +1652,8 @@ body[data-mode="doc"] .lead { max-width: 100%; }
       <aside class="handout">
         <h3>슬래시까지 와도 남는 한 가지: 시작 버튼</h3>
         <p>
-          슬래시 커맨드까지 만들면 긴 지시가 <code>/회의록정리</code> 핵심 개념로 줄어듭니다.
-          하지만 그 핵심 개념는 여전히 사람이 입력해야 합니다. 즉 시작 버튼은 아직 사람 손에 있습니다.
+          슬래시 커맨드까지 만들면 긴 지시가 <code>/회의록정리</code> 한 줄로 줄어듭니다.
+          하지만 그 한 줄은 여전히 사람이 입력해야 합니다. 즉 시작 버튼은 아직 사람 손에 있습니다.
         </p>
         <p>
           스케줄 자동화는 그 마지막 버튼마저 떼어냅니다.
@@ -2297,7 +2297,7 @@ model: sonnet
         <h3>예시로 보는 보고서 자동 작성 시스템</h3>
         <p>지난 파트의 패턴들을 엮으면 이런 시스템이 됩니다. 일반 업무 사례로 풀어보겠습니다.</p>
         <ol class="steps">
-          <li><strong>입력</strong>: <code>이번 분기 영업 실적 보고서 만들어줘</code>라는 핵심 개념가 들어옵니다.</li>
+          <li><strong>입력</strong>: <code>이번 분기 영업 실적 보고서 만들어줘</code>라는 요청이 들어옵니다.</li>
           <li><strong>라우터<button type="button" class="modal-trigger" data-modal="m-router" aria-label="라우터 설명">i</button></strong>: 이 요청이 조사형인지 작성형인지 판단해 알맞은 흐름으로 보냅니다. <em>(Routing 패턴)</em></li>
           <li><strong>순차 처리</strong>: 리서처(자료 수집), 작성자(초안), 검토자(report-reviewer) 순으로 결과를 넘깁니다. <em>(Prompt Chaining 패턴)</em></li>
           <li><strong>검증</strong>: 검토자가 보완 판정을 내리면, 그 피드백과 함께 작성자 단계로 되돌립니다. 통과할 때까지 반복합니다. <em>(Evaluator-Optimizer 패턴)</em></li>
@@ -2877,7 +2877,7 @@ model: sonnet
         <p>오늘 배운 것을 한꺼번에 다 쓰려 하지 않아도 됩니다. 순서대로 키워가는 것이 가장 빠릅니다.</p>
         <ol class="steps">
           <li><strong>작게 고릅니다.</strong> 1주차의 다섯 가지 특성으로, 반복되고 입출력이 분명하고 작게 자를 수 있는 업무 한 단계를 고릅니다.</li>
-          <li><strong>슬래시 커맨드로 묶습니다.</strong> 그 한 단계를 <code>/이름</code> 핵심 개념로 저장합니다. 여기까지만 해도 매주 시간이 절약됩니다.</li>
+          <li><strong>슬래시 커맨드로 묶습니다.</strong> 그 한 단계를 <code>/이름</code> 명령으로 저장합니다. 여기까지만 해도 매주 시간이 절약됩니다.</li>
           <li><strong>스킬로 키웁니다.</strong> 자주 쓰게 되면, AI가 알아서 꺼내 쓰도록 스킬로 만듭니다.</li>
           <li><strong>에이전트에게 맡깁니다.</strong> 판단과 검증이 필요한 일이 되면, 역할을 나눠 서브에이전트로 확장합니다.</li>
           <li><strong>마지막에 예약을 겁니다.</strong> 흐름이 안정되면, 스케줄로 사람 손까지 뗍니다.</li>
