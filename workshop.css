@@ -79,3 +79,14 @@ body .theme-toggle,body .toc-toggle{z-index:60}body .toc-backdrop{z-index:24}
 @media(max-width:1180px){body .topbar{margin-top:60px}body .sidebar{inset:0 auto 0 0;width:min(320px,86vw);padding:72px 20px 24px}body .toc-open .sidebar{transform:translateX(0)}}
 @media(max-width:600px){body .topbar,body[data-mode="doc"] .deck{width:calc(100% - 40px)}body .cards,body .cards.four{grid-template-columns:1fr}body .unit{overflow-wrap:anywhere}body .handout h1 br{display:none}body .pipeline{flex-wrap:wrap}body .pipeline-step{min-width:0}body .modal-box{max-width:calc(100vw - 32px)}}
 @media print{body .topbar{margin:0;width:100%}body[data-mode="doc"] .deck{margin:0;width:100%;padding:0}body[data-mode="doc"] .unit{padding:20px 0}body .table-scroll{overflow:visible}body .table-scroll table{min-width:0}}
+
+/* Course identity and navigation: larger touch targets, clear active lecture. */
+body .topbar .brand-name{display:inline;font:650 19px/1.4 var(--title-font);color:var(--navy)}
+body .topbar .course-nav{display:flex;gap:10px;margin-left:auto}
+body .topbar .course-nav a{display:flex;align-items:center;justify-content:center;min-width:68px;min-height:46px;padding:8px 20px;box-sizing:border-box;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--navy);font:600 17px/1.4 var(--body-font);text-decoration:none}
+body .topbar .course-nav a[aria-current="page"]{background:var(--blue);border-color:var(--blue);color:#fff;text-decoration:none}
+body .topbar .course-nav a:hover{border-color:var(--blue)}
+body .topbar .course-nav a:focus-visible{outline:2px solid var(--blue);outline-offset:4px}
+body[data-mode="doc"] #slide-1 .slide-copy h1{font:700 clamp(36px,4vw,50px)/1.25 var(--title-font);letter-spacing:-.04em;word-break:keep-all;text-wrap:balance;margin:12px 0 18px}
+body[data-mode="doc"] #slide-1 .course-author{font:500 15px/1.6 var(--body-font);color:var(--ink-2);margin:0 0 24px}
+@media(max-width:600px){body .topbar{gap:18px}body .topbar .course-nav{width:100%;margin:0}body .topbar .course-nav a{flex:1;min-height:48px}body[data-mode="doc"] #slide-1 .slide-copy h1{font-size:36px}}
